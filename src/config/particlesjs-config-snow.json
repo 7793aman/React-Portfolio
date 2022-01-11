@@ -1,0 +1,35 @@
+{
+     "particles": {
+	        "number": {
+	            "value": 150,
+	            "density": {
+	                "enable": false
+	            }
+	        },
+	        "size": {
+	            "value": 3,
+	            "random": true
+	        },
+	        "move": {
+	            "direction": "bottom",
+	            "out_mode": "out",
+                "speed":0.3
+	        },
+	        "line_linked": {
+	            "enable": false
+	        }
+	    },
+	    "interactivity": {
+	        "events": {
+	            "onclick": {
+	                "enable": true,
+	                "mode": "remove"
+	            }
+	        },
+	        "modes": {
+	            "remove": {
+	                "particles_nb": 10
+	            }
+	        }
+	    }
+}

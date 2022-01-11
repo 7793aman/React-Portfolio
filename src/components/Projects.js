@@ -9,6 +9,7 @@ import ParticleComponent from "../subComponents/ParticleComponent";
 import { Projects } from "../data/ProjectData";
 import Card from "../subComponents/Card"
 import { YinYang } from "./AllSvgs";
+import { motion } from "framer-motion";
 
 const ProjectPage = (props) => {
     const ref = useRef(null);
@@ -19,7 +20,7 @@ const ProjectPage = (props) => {
 
         const rotate = () => {
             if (element) { element.style.transform = `translateX(${-window.pageYOffset}px)` };
-            if (yinyang) { yinyang.current.style.transform = `rotate(` + -window.pageYOffset + 'deg)' };
+            if (yinyang.current) { yinyang.current.style.transform = `rotate(` + -window.pageYOffset + 'deg)' };
         }
 
         window.addEventListener('scroll', rotate);
@@ -39,7 +40,8 @@ const ProjectPage = (props) => {
                         <SocialIcons theme='dark' />
                     </LeftContainer>
                     <RightContainer>
-                        <Main ref={ref}>
+                        <Main ref={ref} variants={FramerConfig} initial="hidden"
+                        animate="show">
                             {
                                 Projects.map(d =>
                                     <Card key={d.id} data={d} theme="dark" />
@@ -58,6 +60,17 @@ const ProjectPage = (props) => {
     )
 }
 
+//Framer motion configuration
+const FramerConfig = {
+    hidden: { opacity: 0 },
+    show: {
+        opacity: 1,
+        transition: {
+            staggerChildren: 0.3,
+            duration: 0.3
+        }
+    }
+}
 
 
 const Container = styled.div`
@@ -96,7 +109,7 @@ const LeftContainer = styled.div`
 flex:0.1;
 `
 
-const Main = styled.ul`
+const Main = styled(motion.ul)`
 z-index:99999;
 position:fixed;
 top:10.75rem;

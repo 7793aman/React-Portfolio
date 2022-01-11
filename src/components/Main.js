@@ -11,14 +11,14 @@ import { motion } from 'framer-motion'
 const Main = () => {
 
     const [click, setClick] = useState(false);
-
     const handleClick = () => {
         setClick(!click);
     }
+
     return (
         <MainContainer className="main__container">
-            <DarkDiv click={click} className='dark__div' />
 
+            <DarkDiv click={click} className='dark__div' />
             <HeaderPanel className="header__panel">
                 <LogoComponent theme={click ? 'dark' : 'light'} />
                 <PowerButton />
@@ -26,6 +26,14 @@ const Main = () => {
                     <motion.h3
                         whileHover={{ scale: 1.1 }}
                         whileTap={{ scale: 0.9 }}
+                        // initial={{
+                        //     y: -200,
+                        //     transition: { type: 'spring', duration: 1.5, delay: 1 }
+                        // }}
+                        // animate={{
+                        //     y: 0,
+                        //     transition: { type: 'spring', duration: 1.5, delay: 1 }
+                        // }}
                     >
                         Say hi...
                     </motion.h3>
@@ -36,7 +44,9 @@ const Main = () => {
                 <LeftPanel className='left__panel'>
                     <div className='work__content'>
 
-                        <Work to="/work" click={click}>
+                        <Work to="/work" click={click}
+
+                        >
                             <h2>
                                 Work
                             </h2>
@@ -47,8 +57,8 @@ const Main = () => {
                     <SocialIcons className="social__content" theme={click ? 'dark' : 'light'} />
                 </LeftPanel>
 
-                <CenterPanel className='center__panel' onClick={() => handleClick()}>
-                    <Center click={click} className='center' width={click ? 95 : 175} height={click ? 95 : 175}>
+                <CenterPanel className='center__panel'>
+                    <Center onClick={() => handleClick()} click={click} className='center' width={click ? 95 : 175} height={click ? 95 : 175}>
                         <YinYang width={click ? 95 : 175} height={click ? 95 : 175} fill='currentColor' />
                         {!click && <h2>Who am I?</h2>}
                     </Center>
@@ -57,6 +67,14 @@ const Main = () => {
                             <motion.h2
                                 whileHover={{ scale: 1.1 }}
                                 whileTap={{ scale: 0.9 }}
+                                // initial={{
+                                //     y: 200,
+                                //     transition: { type: 'spring', duration: 1.5, delay: 1 }
+                                // }}
+                                // animate={{
+                                //     y: 0,
+                                //     transition: { type: 'spring', duration: 1.5, delay: 1 }
+                                // }}
                             >
                                 About
                             </motion.h2>
@@ -65,6 +83,14 @@ const Main = () => {
                             <motion.h2
                                 whileHover={{ scale: 1.1 }}
                                 whileTap={{ scale: 0.9 }}
+                                // initial={{
+                                //     y: 200,
+                                //     transition: { type: 'spring', duration: 1.5, delay: 1 }
+                                // }}
+                                // animate={{
+                                //     y: 0,
+                                //     transition: { type: 'spring', duration: 1.5, delay: 1 }
+                                // }}
                             >
                                 My Skills
                             </motion.h2>
@@ -105,6 +131,8 @@ const Main = () => {
 
 
 const MainContainer = styled.div`
+display:flex;
+flex-direction:column;
 background: ${props => props.theme.body};
 width:100vw;
 height:100vh;
@@ -116,12 +144,11 @@ h2, h2, h4, h5, h6{
     font-weight:500;
     letter-spacing:1px;
 }
-display:flex;
-flex-direction:column;
+
+
 `
 
 const HeaderPanel = styled.div`
-
 margin:1.5rem 3rem 2rem 3rem;
 paddding:1rem;
 display:flex;
@@ -210,7 +237,9 @@ h2{
 }
 
 
-transform:${props => props.click ? 'translate(45vw,48vh)':''};
+transform:${props => props.click ? 'translate(80vw,48vh)' : ''};
+
+width:${props => props.click ? '15%' : ''};
 transition:all 1s ease;
 `
 
@@ -236,15 +265,15 @@ display:flex;
 color:${props => props.theme.text};
 text-decoration:none;
 z-index:3;
+transition : all 1s ease;
 `
 
 const RightPanel = styled.div`
 display:flex;
 justify-content:flex-end;
-align-items:center;
 position:relative;
 right:-1em;
-top:-3em;
+top:-2em;
 `
 
 const RightPanelContent = styled.div`

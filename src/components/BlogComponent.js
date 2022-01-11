@@ -1,11 +1,13 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import styled from "styled-components";
+import { motion } from "framer-motion";
 
 const BlogComponent = (props) => {
     const { name, tags, link, imgSrc } = props.blog;
     return (
-        <Box target="_blank" to={{ pathname: link }}>
+
+        <Box target="_blank" to={{ pathname: link }} variants={BlogComponentConfig}>
             <Image img={imgSrc} />
             <Title>{name}</Title>
             <HashTags>
@@ -13,13 +15,28 @@ const BlogComponent = (props) => {
                     tags.map((t, id) => {
                         return <Tag key={id}>#{t}</Tag>
                     })
-                }       
+                }
             </HashTags>
         </Box>
+
     )
 }
 
-const Box = styled(NavLink)`
+const BlogComponentConfig = {
+    hidden: {
+        scale: 0
+    },
+    show: {
+        scale: 1,
+        transition: {
+            type: 'spring',
+            duration: 0.5
+        }
+    }
+}
+
+
+const Box = styled(motion(NavLink))`
 width:calc(10rem + 15vw);
 text-decoration:none;
 color:${props => props.theme.body};
@@ -30,12 +47,14 @@ backdrop-filter:blur(2px);
 box-shadow:0 0 1rem 0 rgba(0,0,0,0.2);
 cursor:pointer;
 flex:0.5 ;
-z-index:5;
+z-index:999999;
+background:smokewhite;
 
 &:hover{
 color:${props => props.theme.body};
-transform :scale(1.1);
-background-color:${props => props.theme.text};
+transform :scale(1.1) !important;
+// background-color:${props => props.theme.text};
+background:smokewhite;
 transition:all 0.4s ease;
 }
 `
@@ -45,10 +64,10 @@ background-image:${props => `url(${props.img})`};
 width:100%;
 height:60%;
 background-size:cover;
-background-position:center center;
+background-position:center;
 border:0.5px solid ${props => props.theme.text};
 ${Box}:hover &{
-    border:1px solid ${props=>props.theme.body};
+    border:1px solid ${props => props.theme.body};
 } 
 `
 

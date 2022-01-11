@@ -3,12 +3,13 @@ import styled from "styled-components";
 import { NavLink } from "react-router-dom";
 import { Github } from "../components/AllSvgs"
 import { DarkTheme } from "../components/Theme";
+import { motion } from "framer-motion";
 const Card = (props) => {
 
 
     const { id, name, description, tags, github } = props.data;
     return (
-        <Box key={id}>
+        <Box key={id} variants={CardConfig}>
             <Title>{name}</Title>
             <Description>
                 {description}
@@ -31,6 +32,19 @@ const Card = (props) => {
     )
 }
 
+const CardConfig = {
+    hidden: {
+        scale: 0
+    },
+    show: {
+        scale: 1,
+        transition: {
+            type: 'spring',
+            duration: 0.5
+        }
+    }
+}
+
 const Link = styled(NavLink)`
 display:block;
 display:flex;
@@ -47,7 +61,20 @@ color:${props => props.theme.text};
 }
 `
 
-const Box = styled.li`
+const FrameConfig = {
+    hidden: {
+        scale: 0
+    },
+    show: {
+        scale: 1,
+        transition: {
+            type: 'spring',
+            duration: 0.3
+        }
+    }
+}
+
+const Box = styled(motion.li)`
 z-index:999;
 width: 18rem;
 height:43vh;

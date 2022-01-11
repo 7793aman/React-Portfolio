@@ -19,7 +19,6 @@ const AnchorComponent = () => {
             if (ref.current) {
                 ref.current.style.transform = `translateY(${-diffP}%)`;
             }
-
         }
 
         window.addEventListener('scroll', handleScroll);

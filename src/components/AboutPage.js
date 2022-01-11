@@ -7,6 +7,7 @@ import PowerButton from '../subComponents/PowerButton'
 import SocialIcons from '../subComponents/SocialIcons'
 import ParticleComponent from "../subComponents/ParticleComponent";
 import astronaut from "../assets/Images/Astronaut.png"
+import { motion } from 'framer-motion'
 
 const AboutPage = () => {
     return (
@@ -37,7 +38,16 @@ const AboutPage = () => {
                         </Main>
                         <Box>
                             <Spaceman>
-                                <img src={astronaut} width={265} height={425} alt="spaceman"></img>
+                                <motion.img src={astronaut} width={265} height={425} alt="spaceman"
+                                    initial={{
+                                        position: 'relative',
+                                        top: '26em',
+                                        left:'10em'
+                                    }}
+                                    animate={{ top: 0 , left:'0em'}}
+                                    transition={{ type: 'spring', duration: 1.5, delay: 0.5 }}
+
+                                ></motion.img>
                             </Spaceman>
                         </Box>
                     </RightContainer>

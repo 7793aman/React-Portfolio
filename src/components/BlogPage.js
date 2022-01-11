@@ -1,6 +1,5 @@
 import React from 'react'
 import styled from 'styled-components'
-import img from "../assets/Images/Interest.jpg"
 import LogoComponent from '../subComponents/LogoComponent'
 import PowerButton from '../subComponents/PowerButton'
 import SocialIcons from '../subComponents/SocialIcons'
@@ -8,12 +7,20 @@ import { Blogs } from '../data/BlogData'
 import BlogComponent from './BlogComponent'
 import AnchorComponent from '../subComponents/Anchor'
 import ParticleComponent from "../subComponents/ParticleComponent";
+import { motion } from "framer-motion";
+
 const BlogPage = () => {
     return (
-        <MainContainer>
-           
+        <MainContainer variants={BlogPageConfig}
+            initial='hidden'
+            animate='show'
+            exit={{
+                opacity: 0,
+                transition:{type:'spring',duration:0.5}
+        }}>
+
             <Container className='container'>
-                <ParticleComponent className="particle__component" theme='images' />
+                <ParticleComponent className="particle__component" theme='snow' />
                 <HeaderContainer className='header__container'>
                     <LogoComponent theme="dark" />
                     <PowerButton />
@@ -42,8 +49,20 @@ const BlogPage = () => {
     )
 }
 
+const BlogPageConfig = {
+    hidden: {
+        opacity: 0
+    },
+    show: {
+        opacity: 1,
+        transition: {
+            staggerChildren: 0.5,
+            duration: 0.5
+        }
+    }
+}
 
-const MainContainer = styled.div`
+const MainContainer = styled(motion.div)`
 
 .particle__component{
     position:fixed;
@@ -60,13 +79,15 @@ const HeaderContainer = styled.div`
 z-index:9999;
 display:flex;
 position: fixed;
+height:15vh;
 width: 100%;
 justify-content:flex:start;
 align-items:center;
-padding:1em 2em 0 2em;
+margin:0rem 2rem 0 2rem;
 .logo__container{
 width:46%;
 }
+
 `
 
 const BodyContainer = styled.div`{
@@ -90,7 +111,7 @@ flex-grow:0.8;
 z-index:3;
 justify-content:center;
 align-items:center; 
-padding-top:8em;
+padding-top:10em;
 padding-bottom:2em;
 margin-right:2em;
 `

@@ -5,14 +5,14 @@ import configDark from "../config/particlesjs-config.json"
 import configLight from "../config/particlesjs-config-light.json"
 import configNight from "../config/particlesjs-config-night.json"
 import configImages from "../config/particlesjs-config-images.json"
+import configSnow from "../config/particlesjs-config-snow.json"
 
 
 const ParticleComponent = (props) => {
     return (
         <Box>
-            <Particles style={{ position: 'absolute', top: 0 }} params=
-                {props.theme === 'images' ? configImages :
-                    props.theme === "light" ? configLight : props.theme === "night" ? configNight : configDark} />
+            <Particles style={{ position: 'absolute', top: 0 }} params={props.theme === 'snow' ? configSnow : props.theme === 'images' ? configImages :
+                props.theme === "light" ? configLight : props.theme === "night" ? configNight : configDark} />
         </Box>
     )
 }

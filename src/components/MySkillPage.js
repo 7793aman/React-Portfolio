@@ -99,11 +99,12 @@ align-items:center;
 padding:0 2em 0 2em;
 height:15vh;
 .logo__container{
-width:45.5%;
+width:48%;
 margin-left:0.25em;
 `
 const CenterContainer = styled.div`
 display:flex;
+padding-left:2rem;
 `
 const LeftContainer = styled.div`
 display:flex;
