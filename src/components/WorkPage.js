@@ -130,9 +130,6 @@ const WorkPage = () => {
                                             <li>
                                                 Developed various Frontend dashboard components using React.js. </li>
                                             <br></br>
-                                            <li>
-                                                Implemented Swagger based API documentation to eliminate manual API documentation and reduce overall testing team efforts                                            </li>
-                                            <br></br>
                                         </ul>
                                     </Description>
                                 </TimeLineItem>
@@ -181,6 +178,7 @@ flex:auto;
 justify-content:center;
 align-items:start;
 scrollbar-color: rebeccapurple green;
+
 `
 const Main = styled.div`
 cursor:pointer;
@@ -198,16 +196,6 @@ display:flex;
 overflow-y:scroll;
 flex-direction:column;
 justify-content:space-between;
-
-// &:hover{
-//     color:${props => props.theme.body};
-//     background-color:${props => props.theme.text};
-
-::-webkit-scrollbar-thumb {
-        background: white; 
-        color:white
-}
-}
 
 ::-webkit-scrollbar {
   width: 0px;
@@ -227,16 +215,17 @@ justify-content:space-between;
 `
 
 const Content = styled.div`
-
+  &:first-child{
+         padding-top:2rem;
+    }
+}
 `
 const TimeLineItem = styled.div`
-    border-left: 4px dotted darkslategray;
-    padding:0 0 2rem 1.5rem;
+    border-left: 4px dotted rgba(0,0,0,0.75);
+    padding:0 0 2rem 2rem;
     position: relative;
 
-    &:first-child{
-
-    }
+  
 ::before{
     content: '';
     position: absolute;
