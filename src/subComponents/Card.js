@@ -86,7 +86,7 @@ border-radius:0 50px 0 50px;
 display:flex;
 flex-direction:column;
 justify-content: space-between;
-border:1px sol id ${prop => prop.theme.body};
+border:1px solid ${prop => prop.theme.body};
 transition: all 0.5s ease;
 cursor:pointer;
 &: hover{

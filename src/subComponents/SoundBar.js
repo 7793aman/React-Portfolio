@@ -43,13 +43,12 @@ const play = keyframes`
 
 
 const Box = styled.div`
-z-index:99999999;
+z-index:9999999999999;
 display:flex;
 cursor:pointer;
 position:fixed;
 left:9rem;
 top:2.5rem;
-z-index:10;
 
 
 &>*: nth-child(1){

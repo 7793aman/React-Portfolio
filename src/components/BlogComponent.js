@@ -42,7 +42,7 @@ text-decoration:none;
 color:${props => props.theme.body};
 height:13rem;
 padding:1rem;
-border:2px solid ${props => props.theme.text};
+border:1px solid ${props => props.theme.body};
 backdrop-filter:blur(2px);
 box-shadow:0 0 1rem 0 rgba(0,0,0,0.2);
 cursor:pointer;
@@ -65,10 +65,7 @@ width:100%;
 height:60%;
 background-size:cover;
 background-position:center;
-border:0.5px solid ${props => props.theme.text};
-${Box}:hover &{
-    border:1px solid ${props => props.theme.body};
-} 
+
 `
 
 const Title = styled.h3`

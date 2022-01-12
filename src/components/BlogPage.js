@@ -70,7 +70,7 @@ const MainContainer = styled(motion.div)`
 `
 
 const Container = styled.div`
-background-color: ${props => props.theme.text};
+background: linear-gradient(45deg, rgb(69, 72, 77) 0%, rgb(0, 0, 0) 100%);
 color:${props => props.theme.body};
 `
 
