@@ -1,18 +1,17 @@
 import React from "react";
 import styled, { ThemeProvider } from "styled-components"
 import { lightTheme } from "./Theme"
-import { Design, Develope } from "./AllSvgs"
 import LogoComponent from "../subComponents/LogoComponent"
 import PowerButton from '../subComponents/PowerButton'
 import SocialIcons from '../subComponents/SocialIcons'
 import ParticleComponent from "../subComponents/ParticleComponent";
+import { Develope } from "../components/AllSvgs";
 
 const WorkPage = () => {
     return (
         <ThemeProvider theme={lightTheme}>
-            <ParticleComponent theme='light' />
             <Container>
-
+                <ParticleComponent theme='light' />
                 <HeaderContainer>
                     <LogoComponent className="logo" theme='light' />
                     <PowerButton />
@@ -22,7 +21,11 @@ const WorkPage = () => {
                         <SocialIcons theme='light' />
                     </LeftContainer>
                     <RightContainer className="right__container">
+                
                         <Main className="main__left">
+                            <WorkExperience>
+                                <Develope width={50} height={50} />
+                            </WorkExperience>
                             <Content >
                                 <TimeLineItem>
                                     <Title>
@@ -133,8 +136,11 @@ const WorkPage = () => {
                                         </ul>
                                     </Description>
                                 </TimeLineItem>
+
                             </Content>
+
                         </Main>
+
                     </RightContainer>
                 </CenterContainer>
             </Container>
@@ -195,7 +201,6 @@ font-family: 'Ubuntu Mono', monospace;
 display:flex;
 overflow-y:scroll;
 flex-direction:column;
-justify-content:space-between;
 
 ::-webkit-scrollbar {
   width: 0px;
@@ -305,4 +310,7 @@ margin-left: 1rem;
 // }
 `
 
+const WorkExperience = styled.div`
+align-self:center;
+`
 export default WorkPage
