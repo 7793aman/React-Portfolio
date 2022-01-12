@@ -13,7 +13,7 @@ const MySkillsPage = () => {
             <ParticleComponent theme='light' />
             <Container>
                 <HeaderContainer>
-                    <LogoComponent className="logo" theme='light' />
+                    <LogoComponent  theme='light' />
                     <PowerButton />
                 </HeaderContainer>
                 <CenterContainer className="center__container">
@@ -24,7 +24,7 @@ const MySkillsPage = () => {
                         <Box>
                             <Main className="main__left">
                                 <Title>
-                                    <Design width={40} height={40} className="title" />
+                                    <Design width={40} height={40} className="title logo" />
                                     <span className="title">Frontend</span>
                                 </Title>
                                 <Description>
@@ -51,7 +51,7 @@ const MySkillsPage = () => {
                             </Main>
                             <Main>
                                 <Title>
-                                    <Develope class="logo" width={40} height={40} />
+                                    <Develope className="logo" width={40} height={40} />
                                     <span className="title">Backend</span>
                                 </Title>
                                 <Description>
