@@ -14,7 +14,7 @@ const Intro = () => {
                 <Text>
                     <h1>Hi,</h1>
                     <h3>I'm Aman Jain</h3>
-                    <h6>I have worked as a full-stack developer over 4 years. I am currently pursuingmy Master's at Virginia Tech.</h6>
+                    <h6>I am currently pursuing my Master's at Virginia Tech and have four years of exprience as a full-stack developer.</h6>
                 </Text>
             </SubBox>
             <SubBox>
@@ -88,6 +88,10 @@ justify-content:space-evenly;
 
 h3,h6{
 margin-top:1rem;
+}
+
+h6{
+    font-size:1rem !important;
 }
 `
 export default Intro;
