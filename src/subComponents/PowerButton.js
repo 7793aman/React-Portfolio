@@ -31,7 +31,7 @@ border:1px solid #000;
 width:2.75rem;
 height:2.75rem;
 cursor:pointer;
-transition: transform 1s ease, border 2s ease;
+transition: transform 0.5s ease, border 2s ease;
 
 &>*:first-child{
     text-decoration:none;

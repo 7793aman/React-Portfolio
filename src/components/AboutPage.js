@@ -1,7 +1,7 @@
 
 import React from "react";
 import styled, { keyframes, ThemeProvider } from "styled-components"
-import { DarkTheme, lightTheme } from "./Theme"
+import { DarkTheme } from "./Theme"
 import LogoComponent from "../subComponents/LogoComponent"
 import PowerButton from '../subComponents/PowerButton'
 import SocialIcons from '../subComponents/SocialIcons'
@@ -42,9 +42,9 @@ const AboutPage = () => {
                                     initial={{
                                         position: 'relative',
                                         top: '26em',
-                                        left:'10em'
+                                        left: '10em'
                                     }}
-                                    animate={{ top: 0 , left:'0em'}}
+                                    animate={{ top: 0, left: '0em' }}
                                     transition={{ type: 'spring', duration: 1.5, delay: 0.5 }}
 
                                 ></motion.img>

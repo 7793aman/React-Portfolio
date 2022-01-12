@@ -1,4 +1,4 @@
-import React, { useEffect, useReducer, useRef } from "react";
+import React from "react";
 import styled from "styled-components";
 import { NavLink } from "react-router-dom";
 import { Github } from "../components/AllSvgs"
@@ -61,18 +61,6 @@ color:${props => props.theme.text};
 }
 `
 
-const FrameConfig = {
-    hidden: {
-        scale: 0
-    },
-    show: {
-        scale: 1,
-        transition: {
-            type: 'spring',
-            duration: 0.3
-        }
-    }
-}
 
 const Box = styled(motion.li)`
 z-index:999;

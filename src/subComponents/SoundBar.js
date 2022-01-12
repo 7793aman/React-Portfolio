@@ -5,7 +5,7 @@ import music from "../assets/audio/Ludovico-Einaudi-Primavera.mp3"
 
 const SoundBar = (props) => {
     const ref = useRef(null);
-    const [click, setClick] = useState(false);
+    const [click, setClick] = useState(0);
 
     const handleClick = () => {
         setClick(!click);

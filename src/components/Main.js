@@ -10,7 +10,7 @@ import { motion } from 'framer-motion'
 
 const Main = () => {
 
-    const [click, setClick] = useState(false);
+    const [click, setClick] = useState(0);
     const handleClick = () => {
         setClick(!click);
     }
@@ -24,16 +24,8 @@ const Main = () => {
                 <PowerButton />
                 <Contact target="_blank" to={{ pathname: "mailto:amanj@vt.edu" }}>
                     <motion.h3
-                        whileHover={{ scale: 1.1 }}
-                        whileTap={{ scale: 0.9 }}
-                        // initial={{
-                        //     y: -200,
-                        //     transition: { type: 'spring', duration: 1.5, delay: 1 }
-                        // }}
-                        // animate={{
-                        //     y: 0,
-                        //     transition: { type: 'spring', duration: 1.5, delay: 1 }
-                        // }}
+                    whileHover={{ scale: 1.1 }}
+                    whileTap={{ scale: 0.9 }}
                     >
                         Say hi...
                     </motion.h3>
@@ -43,15 +35,11 @@ const Main = () => {
             <BodyPanel className='body__panel'>
                 <LeftPanel className='left__panel'>
                     <div className='work__content'>
-
-                        <Work to="/work" click={click}
-
-                        >
+                        <Work to="/work" click={click}>
                             <h2>
                                 Work
                             </h2>
                         </Work>
-
                     </div>
 
                     <SocialIcons className="social__content" theme={click ? 'dark' : 'light'} />
@@ -65,32 +53,16 @@ const Main = () => {
                     <CenterBar click={click}>
                         <About to="/about" click={click}>
                             <motion.h2
-                                whileHover={{ scale: 1.1 }}
-                                whileTap={{ scale: 0.9 }}
-                                // initial={{
-                                //     y: 200,
-                                //     transition: { type: 'spring', duration: 1.5, delay: 1 }
-                                // }}
-                                // animate={{
-                                //     y: 0,
-                                //     transition: { type: 'spring', duration: 1.5, delay: 1 }
-                                // }}
+                            whileHover={{ scale: 1.1 }}
+                            whileTap={{ scale: 0.9 }}
                             >
                                 About
                             </motion.h2>
                         </About>
                         <Skills to="/skills">
                             <motion.h2
-                                whileHover={{ scale: 1.1 }}
-                                whileTap={{ scale: 0.9 }}
-                                // initial={{
-                                //     y: 200,
-                                //     transition: { type: 'spring', duration: 1.5, delay: 1 }
-                                // }}
-                                // animate={{
-                                //     y: 0,
-                                //     transition: { type: 'spring', duration: 1.5, delay: 1 }
-                                // }}
+                            whileHover={{ scale: 1.1 }}
+                            whileTap={{ scale: 0.9 }}
                             >
                                 My Skills
                             </motion.h2>
@@ -104,8 +76,6 @@ const Main = () => {
                         <div className='project__content'>
                             <Projects to="/projects">
                                 <h2
-                                    whileHover={{ scale: 1.1 }}
-                                    whileTap={{ scale: 0.9 }}
                                 >
                                     Projects
                                 </h2>
@@ -144,8 +114,6 @@ h2, h2, h4, h5, h6{
     font-weight:500;
     letter-spacing:1px;
 }
-
-
 `
 
 const HeaderPanel = styled.div`
@@ -179,8 +147,7 @@ align-items:baseline;
 .work__content{
     position:relative;
     top:8em;
-    left:-1
-    em;
+    left:-0.75em;
     display:flex;
 }
 
@@ -193,13 +160,10 @@ const Work = styled(NavLink)`
 color:${props => props.click ? props.theme.body : props.theme.text};
 text-decoration:none;
 z-index:3;
-h2{
-      transform: rotate(-90deg);
-      transition: transform 0.3s;
-}
+transform: rotate(-90deg);
+transition: transform 0.3s ease-in;
 
-
-h2:hover{
+&:hover{
     transform:scale(1.1) rotate(-90deg);
 }
 `
