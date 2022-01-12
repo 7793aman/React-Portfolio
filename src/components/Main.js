@@ -241,10 +241,11 @@ top:-2em;
 `
 
 const RightPanelContent = styled.div`
-height:100%;
+height:95%;
 display:flex;
-justify-content:space-evenly;
+justify-content:space-around;
 flex-direction:column;
+margin-top:2em;
 `
 
 const PersonalInterest = styled(NavLink)`
