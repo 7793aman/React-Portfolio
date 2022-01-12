@@ -21,7 +21,7 @@ const WorkPage = () => {
                         <SocialIcons theme='light' />
                     </LeftContainer>
                     <RightContainer className="right__container">
-                
+
                         <Main className="main__left">
                             <WorkExperience>
                                 <Develope width={50} height={50} />
@@ -108,7 +108,7 @@ const WorkPage = () => {
                             </Content>
 
                             <Content>
-                                <TimeLineItem>
+                                <TimeLineItem className="timeline">
                                     <Title>
                                         <div className="first__details">
                                             <Name >Curofy </Name>
@@ -121,7 +121,7 @@ const WorkPage = () => {
                                         </div>
                                     </Title>
 
-                                    <Description>
+                                    <Description className="last__child">
                                         <ul>
                                             <li>
                                                 Implemented Swagger based API documentation to eliminate manual API documentation and reduce overall testing team efforts
@@ -136,9 +136,7 @@ const WorkPage = () => {
                                         </ul>
                                     </Description>
                                 </TimeLineItem>
-
                             </Content>
-
                         </Main>
 
                     </RightContainer>
@@ -206,31 +204,27 @@ flex-direction:column;
   width: 0px;
 }
 
-/* Track */
 ::-webkit-scrollbar-track {
   box-shadow: inset 0 0 5px grey; 
   border-radius: 10px;
 }
  
-/* Handle */
 ::-webkit-scrollbar-thumb {
   background: black; 
   border-radius: 10px;
 }
 `
-
 const Content = styled.div`
-  &:first-child{
-         padding-top:2rem;
-    }
+.timeline{
+    padding-bottom:0;
 }
 `
-const TimeLineItem = styled.div`
-    border-left: 4px dotted rgba(0,0,0,0.75);
-    padding:0 0 2rem 2rem;
-    position: relative;
 
-  
+const TimeLineItem = styled.div`
+border-left: 4px dotted rgba(0,0,0,0.75);
+padding:0 0 2rem 2rem;
+position: relative;
+
 ::before{
     content: '';
     position: absolute;
@@ -252,19 +246,15 @@ flex-direction:column;
 justify-content:flex-start;
 font-weight:100;
 font-size:1rem;
-// ${Main}:hover &{
-//     &>*{
-//      color:${props => props.theme.body};
-//     }
-// }
 
 .first__details{
     display:flex;
     justify-content:start;
     align-items:baseline;
 }
-
 `
+
+
 
 const Name = styled.span`
 margin-right:0.5rem;
