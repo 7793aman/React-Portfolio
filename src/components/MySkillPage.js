@@ -12,7 +12,6 @@ const MySkillsPage = () => {
         <ThemeProvider theme={lightTheme}>
             <ParticleComponent theme='light' />
             <Container>
-
                 <HeaderContainer>
                     <LogoComponent className="logo" theme='light' />
                     <PowerButton />
@@ -52,7 +51,7 @@ const MySkillsPage = () => {
                             </Main>
                             <Main>
                                 <Title>
-                                    <Develope width={40} height={40} />
+                                    <Develope class="logo" width={40} height={40} />
                                     <span className="title">Backend</span>
                                 </Title>
                                 <Description>
@@ -149,6 +148,10 @@ justify-content:space-between;
 &:hover{
     color:${props => props.theme.body};
     background-color:${props => props.theme.text};
+
+    .logo{
+        background:white;
+    }
 }
 
 `
