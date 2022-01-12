@@ -1,4 +1,7 @@
 {
   "projects": {
-  }
+    "prod": "portfolio-53908",
+    "default": "portfolio-53908"
+  },
+  "targets": {}
 }
