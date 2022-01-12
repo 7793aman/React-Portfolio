@@ -109,7 +109,7 @@ height:100vh;
 overflow:hidden;
 position:relative;
 h2, h2, h4, h5, h6{
-    font-size:20px;
+    font-size:24px !important;
     font-family:'Karla', sans-serif;
     font-weight:500;
     letter-spacing:1px;
