@@ -24,8 +24,8 @@ const Main = () => {
                 <PowerButton />
                 <Contact target="_blank" to={{ pathname: "mailto:amanj@vt.edu" }}>
                     <motion.h3
-                    whileHover={{ scale: 1.1 }}
-                    whileTap={{ scale: 0.9 }}
+                        whileHover={{ scale: 1.1 }}
+                        whileTap={{ scale: 0.9 }}
                     >
                         Say hi...
                     </motion.h3>
@@ -53,16 +53,16 @@ const Main = () => {
                     <CenterBar click={click}>
                         <About to="/about" click={click}>
                             <motion.h2
-                            whileHover={{ scale: 1.1 }}
-                            whileTap={{ scale: 0.9 }}
+                                whileHover={{ scale: 1.1 }}
+                                whileTap={{ scale: 0.9 }}
                             >
                                 About
                             </motion.h2>
                         </About>
                         <Skills to="/skills">
                             <motion.h2
-                            whileHover={{ scale: 1.1 }}
-                            whileTap={{ scale: 0.9 }}
+                                whileHover={{ scale: 1.1 }}
+                                whileTap={{ scale: 0.9 }}
                             >
                                 My Skills
                             </motion.h2>
@@ -109,7 +109,7 @@ height:100vh;
 overflow:hidden;
 position:relative;
 h2, h2, h4, h5, h6{
-    font-size:24px !important;
+    font-size:22px !important;
     font-family:'Karla', sans-serif;
     font-weight:500;
     letter-spacing:1px;
