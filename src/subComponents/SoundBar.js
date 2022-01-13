@@ -43,7 +43,7 @@ const play = keyframes`
 
 
 const Box = styled.div`
-z-index:9;
+z-index:9999;
 display:flex;
 cursor:pointer;
 position:fixed;
