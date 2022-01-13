@@ -94,7 +94,7 @@ display:flex;
 width: 100%;
 justify-content:flex:start;
 align-items:center;
-padding:0.25em 2em 0 2em;
+padding:0.25em 2em 0 1.5em;
 height:14vh;
 .logo__container{
 width:48%;
@@ -108,6 +108,7 @@ const LeftContainer = styled.div`
 display:flex;
 flex:0.3;
 align-items:flex-end;
+margin-left:0.5em;
 `
 const RightContainer = styled.div`
 display:flex;

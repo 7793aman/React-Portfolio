@@ -71,7 +71,7 @@ align-items:center;
 height:15vh;
 .logo__container{
 flex:0.5;
-margin-left:0.25em;
+margin-left:0em;
 `
 
 const CenterContainer = styled.div`
