@@ -14,7 +14,7 @@ const Intro = () => {
                 <Text>
                     <h1>Hi,</h1>
                     <h3>I'm Aman Jain</h3>
-                    <h6>I am currently pursuing my Master's at Virginia Tech and have four years of exprience as a full-stack developer.</h6>
+                    <p>I am currently pursuing my Master's at Virginia Tech and have four years of exprience as a full-stack developer.</p>
                 </Text>
             </SubBox>
             <SubBox>
@@ -23,7 +23,7 @@ const Intro = () => {
                     animate={{ opacity: 1 }}
                     transition={{ duration: 1, delay: 1 }}
                 >
-                    <img className="pic" src={Me} alt="Profile Pic" />
+                    <img className="pic" width={375} height={400} src={Me} alt="Profile Pic" />
                 </motion.div>
             </SubBox>
 
@@ -58,40 +58,30 @@ border-right: 2px solid ${props => props.theme.text};
 `
 
 const SubBox = styled.div`
-width:50%;
+
 position:relative;
 display:flex;
+flex:0.5;
 .pic{
     position:absolute;
     bottom:0;
     left:50%;
     transform:translate(-50%,0%);
-    width:100%;
-    height:auto;
 }
 `
 
 const Text = styled.div`
+display:flex;
+flex-direction:column;
+justify-content:space-around;
 font-size:1.2rem;
 color:${props => props.theme.body};
 padding:2rem;
 cursor:pointer;
-display:flex;
-flex-direction:column;
-justify-content:space-evenly;
 
 &>*:last-child{
     color:${props => `rgba(${props.theme.bodyRgba},0.6)`};
-    font-size:1.15rem;
-    font-weight:300;
-}
-
-h3,h6{
-margin-top:1rem;
-}
-
-h6{
-    font-size:1rem !important;
+    font-size:1.1rem;
 }
 `
 export default Intro;

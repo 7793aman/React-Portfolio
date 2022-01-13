@@ -87,7 +87,6 @@ const MySkillsPage = () => {
 const Container = styled.div`
 background-color:${props => props.theme.body};
 height:auto;
-width:100%;
 `
 
 const HeaderContainer = styled.div`
@@ -95,8 +94,8 @@ display:flex;
 width: 100%;
 justify-content:flex:start;
 align-items:center;
-padding:0 2em 0 2em;
-height:15vh;
+padding:0.25em 2em 0 2em;
+height:14vh;
 .logo__container{
 width:48%;
 margin-left:0.25em;

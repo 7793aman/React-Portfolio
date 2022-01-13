@@ -16,10 +16,10 @@ const Main = () => {
     }
 
     return (
-        <MainContainer className="main__container">
+        <MainContainer>
 
             <DarkDiv click={click} className='dark__div' />
-            <HeaderPanel className="header__panel">
+            <HeaderPanel>
                 <LogoComponent theme={click ? 'dark' : 'light'} />
                 <PowerButton />
                 <Contact target="_blank" to={{ pathname: "mailto:amanj@vt.edu" }}>
@@ -32,8 +32,8 @@ const Main = () => {
                 </Contact>
             </HeaderPanel>
 
-            <BodyPanel className='body__panel'>
-                <LeftPanel className='left__panel'>
+            <BodyPanel >
+                <LeftPanel>
                     <div className='work__content'>
                         <Work to="/work" click={click}>
                             <h2>
@@ -106,19 +106,19 @@ flex-direction:column;
 background: ${props => props.theme.body};
 width:100vw;
 height:100vh;
-overflow:hidden;
 position:relative;
+
 h2, h2, h4, h5, h6{
     font-size:22px !important;
     font-family:'Karla', sans-serif;
     font-weight:500;
     letter-spacing:1px;
 }
+
 `
 
 const HeaderPanel = styled.div`
-margin:1.5rem 3rem 2rem 3rem;
-paddding:1rem;
+margin:1.5rem 2rem 2rem 2rem;
 display:flex;
 align-items:center;
 justify-content:space-between;
@@ -128,14 +128,14 @@ const Contact = styled(NavLink)`
 color:${props => props.theme.text};
 text-decoration:none;
 font-size:18px;
-z-index:3;
+z-index:9;
 `
 
 const BodyPanel = styled.div`
 flex:1;
 display:flex;
 flex-direction:row;
-margin: 0rem 3rem 0rem 3rem;
+margin: 0rem 2rem 0rem 2rem;
 justify-content:space-between;
 `
 
@@ -149,10 +149,6 @@ align-items:baseline;
     top:8em;
     left:-0.75em;
     display:flex;
-}
-
-.line__component{
-    height:5em;
 }
 `
 
@@ -185,13 +181,16 @@ flex:auto;
 
 
 const Center = styled.div`
-z-index:999;
+z-index:9;
 position:relative;
 display:flex;
 flex-direction:column;
-justify-content:center;
 align-items:center;
 cursor:pointer;
+transform:${props => props.click ? 'translate(80vw,48vh)' : ''};
+width:${props => props.click ? '15%' : ''};
+transition:all 1s ease;
+
 h2{
     margin-top:1rem;
 }
@@ -199,36 +198,29 @@ h2{
 &>:first-child{
     animation:${rotate} infinite 1.5s linear;
 }
-
-
-transform:${props => props.click ? 'translate(80vw,48vh)' : ''};
-
-width:${props => props.click ? '15%' : ''};
-transition:all 1s ease;
 `
 
 const CenterBar = styled.div`
 display:flex;
 flex:0.1;
-justify-content: space-around;
-align-items: start;
+justify-content:space-around;
+align-items:end;
 position:relative;
-bottom:${props => props.click ? '-5em' : '-2.75em'};
+bottom:${props => props.click ? '-4.5em' : '-2.75em'};
 `
-
 
 const About = styled(NavLink)`
 display:flex;
 color:${props => props.click ? props.theme.body : props.theme.text};
 text-decoration:none;
-z-index:3;
+z-index:9;
 `
 
 const Skills = styled(NavLink)`
 display:flex;
 color:${props => props.theme.text};
 text-decoration:none;
-z-index:3;
+z-index:9;
 transition : all 1s ease;
 `
 
@@ -241,46 +233,45 @@ top:-2em;
 `
 
 const RightPanelContent = styled.div`
-height:95%;
+height:93%;
 display:flex;
 justify-content:space-around;
 flex-direction:column;
-margin-top:2em;
+margin-top:1em;
 `
 
 const PersonalInterest = styled(NavLink)`
 color:${props => props.theme.text};
 text-decoration:none;
-z-index:1;
+z-index:9;
 h2{
 transform:rotate(90deg);
-transition:transform 0.3s;
+transition:transform 0.3s ease-in;
+&:hover{
+  transform:scale(1.1) rotate(90deg);
+ }
 };
-
-h2:hover{
-transform:scale(1.1) rotate(90deg);
-}
-
 `
 
 const Projects = styled(NavLink)`
 color:${props => props.theme.text};
 text-decoration:none;
 z-index:1;
-h2{
-transform:rotate(90deg);
-transition: transform 0.3s;
-}
-
-h2:hover{
-    transform:scale(1.1) rotate(90deg);
-}
-
 margin-top:4rem;
+
+h2{
+  transform:rotate(90deg);
+  transition: transform 0.3s ease-in;
+
+&:hover
+ {
+  transform:scale(1.1) rotate(90deg);
+ }
+}
+
 `
 
 const DarkDiv = styled.div`
-z-index: 1;
 position: absolute;
 right:51%;
 width:${props => props.click ? '49%' : '0%'};
