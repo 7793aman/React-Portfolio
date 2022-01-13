@@ -128,6 +128,8 @@ align-items:center;
     margin-left:1em;
 }
 
+
+
 `
 
 const Main = styled.div`
@@ -144,11 +146,12 @@ font-family: 'Ubuntu Mono', monospace;
 display:flex;
 flex-direction:column;
 justify-content:space-between;
+transition: transform 0.5s ease-out;
 
 &:hover{
     color:${props => props.theme.body};
     background-color:${props => props.theme.text};
-
+    transform :scale(1.1);
     .logo{
         background:white;
     }
