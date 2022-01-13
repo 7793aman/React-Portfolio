@@ -97,7 +97,7 @@ align-items:center;
 padding:0.25em 2em 0 1.5em;
 height:14vh;
 .logo__container{
-width:48%;
+width:49%;
 margin-left:0.25em;
 `
 const CenterContainer = styled.div`
