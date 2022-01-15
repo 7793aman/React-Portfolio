@@ -17,7 +17,6 @@ const Main = () => {
 
     return (
         <MainContainer>
-
             <DarkDiv click={click} className='dark__div' />
             <HeaderPanel>
                 <LogoComponent theme={click ? 'dark' : 'light'} />
@@ -104,10 +103,9 @@ const MainContainer = styled.div`
 display:flex;
 flex-direction:column;
 background: ${props => props.theme.body};
-width:100vw;
 height:100vh;
 position:relative;
-
+padding:0.25rem 2rem;
 h2, h2, h4, h5, h6{
     font-size:22px !important;
     font-family:'Karla', sans-serif;
@@ -118,10 +116,11 @@ h2, h2, h4, h5, h6{
 `
 
 const HeaderPanel = styled.div`
-margin:1.5rem 2rem 2rem 2rem;
+height:15vh;
 display:flex;
 align-items:center;
 justify-content:space-between;
+
 `
 
 const Contact = styled(NavLink)`
@@ -135,7 +134,6 @@ const BodyPanel = styled.div`
 flex:1;
 display:flex;
 flex-direction:row;
-margin: 0rem 2rem 0rem 2rem;
 justify-content:space-between;
 `
 

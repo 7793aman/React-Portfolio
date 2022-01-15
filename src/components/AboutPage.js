@@ -38,7 +38,7 @@ const AboutPage = () => {
                         </Main>
                         <Box>
                             <Spaceman>
-                                <motion.img src={astronaut} width={265} height={425} alt="spaceman"
+                                <motion.img src={astronaut} width={265} height={450} alt="spaceman"
                                     initial={{
                                         position: 'relative',
                                         top: '26em',
@@ -60,29 +60,26 @@ const AboutPage = () => {
 const Container = styled.div`
 background-color:${props => props.theme.body};
 height:100vh;
-width:100vw;
-padding:0 2em 0 2em;
+padding:0 2rem 0 2rem;
 `
 
 const HeaderContainer = styled.div`
 display:flex;
 flex:1;
 align-items:center;
+justify-content:space-between;
 height:15vh;
-.logo__container{
-flex:0.5;
-margin-left:0em;
 `
 
 const CenterContainer = styled.div`
 display:flex;
-z-index:777;
+z-index:9;
 `
 const RightContainer = styled.div`
 flex:1;
 display:flex;
 align-items:center; 
-justify-content:flex-start;
+justify-content:space-around;
 `
 
 const LeftContainer = styled.div`

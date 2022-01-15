@@ -41,7 +41,7 @@ const ProjectPage = (props) => {
                     </LeftContainer>
                     <RightContainer>
                         <Main ref={ref} variants={FramerConfig} initial="hidden"
-                        animate="show">
+                            animate="show">
                             {
                                 Projects.map(d =>
                                     <Card key={d.id} data={d} theme="dark" />
@@ -75,21 +75,20 @@ const FramerConfig = {
 
 const Container = styled.div`
 background-color:${props => props.theme.body};
-width:100vw;
 height:400vh;
 padding:0 2em 0 2em;
 `
 
 const HeaderContainer = styled.div`
 position:fixed;
+top:0;
+right:2rem;
+left:2rem;
 display:flex;
-width:100vw;
+height:15vh;
 z-index:99999999;
 align-items:center;
-.logo__container{
-width:45%;
-}
-padding-top:2rem;
+justify-content:space=between;
 `
 
 const CenterContainer = styled.div`

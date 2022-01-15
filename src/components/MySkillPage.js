@@ -13,7 +13,7 @@ const MySkillsPage = () => {
             <ParticleComponent theme='light' />
             <Container>
                 <HeaderContainer>
-                    <LogoComponent  theme='light' />
+                    <LogoComponent theme='light' />
                     <PowerButton />
                 </HeaderContainer>
                 <CenterContainer className="center__container">
@@ -87,49 +87,33 @@ const MySkillsPage = () => {
 const Container = styled.div`
 background-color:${props => props.theme.body};
 height:auto;
+padding:0 2rem 0 2rem;
 `
 
 const HeaderContainer = styled.div`
 display:flex;
-width: 100%;
-justify-content:flex:start;
+justify-content:space-between;
 align-items:center;
-padding:0.25em 2em 0 1.5em;
-height:14vh;
-.logo__container{
-width:49%;
-margin-left:0.25em;
+height:15vh;
 `
 const CenterContainer = styled.div`
 display:flex;
-padding-left:2rem;
 `
 const LeftContainer = styled.div`
 display:flex;
-flex:0.3;
 align-items:flex-end;
-margin-left:0.5em;
 `
 const RightContainer = styled.div`
-display:flex;
-justify-content:space-between;
 `
 
 const Box = styled.div`
 background-color:${props => props.theme.body};
 width:100vw;
 height:85vh;
-position:relative;
 display:flex;
 justify-content:space-evenly;
 align-items:center;
-
-.main__left{
-    margin-left:1em;
-}
-
-
-
+margin-left:-1em;
 `
 
 const Main = styled.div`

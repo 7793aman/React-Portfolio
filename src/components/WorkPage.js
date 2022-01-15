@@ -150,18 +150,23 @@ const Container = styled.div`
 background-color:${props => props.theme.body};
 height:100vh;
 width:100%;
+display:flex;
+flex-direction:column;
 `
 
 const HeaderContainer = styled.div`
 display:flex;
+justify-content:space-between;
+position: fixed;
+top: 0;
+left: 0;
+right: 0;
+z-index:9999;
+height:15vh;
 width: 100%;
-justify-content:flex:start;
 align-items:center;
 padding:0 2em 0 2em;
-height:15vh;
-.logo__container{
-width:48%;
-margin-left:0.25em;
+
 `
 
 const CenterContainer = styled.div`
@@ -179,8 +184,9 @@ flex:0.1;
 const RightContainer = styled.div`
 display:flex;
 flex:auto;
+height:85vh;
 justify-content:center;
-align-items:start;
+align-items:center;
 scrollbar-color: rebeccapurple green;
 
 `

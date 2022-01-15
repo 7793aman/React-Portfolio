@@ -4,20 +4,22 @@ import styled from "styled-components";
 import { PowerBtn } from '../components/AllSvgs'
 function PowerButton() {
     return (
-        <NavLink to="/">
-            <ButtonContainer className="button__container">
-                <Power className="power__button__circle">
-                    <PowerBtn width={30} height={30} full='currentColor' />
-                </Power>
-            </ButtonContainer>
-        </NavLink>
+
+        <ButtonContainer to="/" className="button__container">
+            <Power className="power__button__circle">
+                <PowerBtn width={30} height={30} full='currentColor' />
+            </Power>
+        </ButtonContainer>
 
     )
 }
 
-const ButtonContainer = styled.div`
+const ButtonContainer = styled(NavLink)`
+justify-self:center;
 display:flex;
+flex:auto;
 justify-content:center;
+position:relative;
 `
 
 const Power = styled.button`
