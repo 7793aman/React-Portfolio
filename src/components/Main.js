@@ -51,20 +51,17 @@ const Main = () => {
                     </Center>
                     <CenterBar click={click}>
                         <About to="/about" click={click}>
-                            <motion.h2
-                                whileHover={{ scale: 1.1 }}
-                                whileTap={{ scale: 0.9 }}
+                            <h2
+                               
                             >
                                 About
-                            </motion.h2>
+                            </h2>
                         </About>
                         <Skills to="/skills">
-                            <motion.h2
-                                whileHover={{ scale: 1.1 }}
-                                whileTap={{ scale: 0.9 }}
+                            <h2
                             >
                                 My Skills
-                            </motion.h2>
+                            </h2>
                         </Skills>
                     </CenterBar>
 
@@ -157,7 +154,7 @@ color:${props => props.click ? props.theme.body : props.theme.text};
 text-decoration:none;
 z-index:3;
 transform: rotate(-90deg);
-transition: transform 0.3s ease-in;
+transition: transform 0.2s ease-in;
 
 &:hover{
     transform:scale(1.1) rotate(-90deg);
@@ -214,6 +211,10 @@ display:flex;
 color:${props => props.click ? props.theme.body : props.theme.text};
 text-decoration:none;
 z-index:9;
+transition: transform 0.2s ease-in;
+&:hover{
+    transform:scale(1.1);
+}
 `
 
 const Skills = styled(NavLink)`
@@ -221,7 +222,10 @@ display:flex;
 color:${props => props.theme.text};
 text-decoration:none;
 z-index:9;
-transition : all 1s ease;
+transition: transform 0.2s ease-in;
+&:hover{
+    transform:scale(1.1);
+}
 `
 
 const RightPanel = styled.div`
@@ -246,7 +250,7 @@ text-decoration:none;
 z-index:9;
 h2{
 transform:rotate(90deg);
-transition:transform 0.3s ease-in;
+transition:transform 0.2s ease-in;
 &:hover{
   transform:scale(1.1) rotate(90deg);
  }
@@ -261,7 +265,7 @@ margin-top:4rem;
 
 h2{
   transform:rotate(90deg);
-  transition: transform 0.3s ease-in;
+  transition: transform 0.2s ease-in;
 
 &:hover
  {
