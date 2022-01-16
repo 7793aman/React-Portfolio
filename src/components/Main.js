@@ -250,28 +250,26 @@ text-decoration:none;
 z-index:9;
 h2{
 transform:rotate(90deg);
-transition:transform 0.2s ease-in;
-&:hover{
+display:block;
+transition: transform 0.2s ease-in;
+&:hover
+ {
   transform:scale(1.1) rotate(90deg);
  }
-};
 `
 
 const Projects = styled(NavLink)`
 color:${props => props.theme.text};
 text-decoration:none;
 z-index:1;
-margin-top:4rem;
-
-h2{
-  transform:rotate(90deg);
-  transition: transform 0.2s ease-in;
-
+margin-top:2rem;
+transform:rotate(90deg);
+display:block;
+transition: transform 0.2s ease-in;
 &:hover
  {
   transform:scale(1.1) rotate(90deg);
  }
-}
 
 `
 
