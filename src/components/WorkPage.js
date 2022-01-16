@@ -149,9 +149,9 @@ const WorkPage = () => {
 const Container = styled.div`
 background-color:${props => props.theme.body};
 height:100vh;
-width:100%;
 display:flex;
 flex-direction:column;
+justify-content:flex-end;
 `
 
 const HeaderContainer = styled.div`
@@ -161,9 +161,8 @@ position: fixed;
 top: 0;
 left: 0;
 right: 0;
-z-index:9999;
+z-index:9;
 height:15vh;
-width: 100%;
 align-items:center;
 padding:0 2em 0 2em;
 
