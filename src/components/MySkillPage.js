@@ -29,7 +29,7 @@ const MySkillsPage = () => {
                     </LeftContainer>
                     <RightContainer>
                         <Box>
-                            <Main className="main__left">
+                            <Main className="main__left  animate__animated animate__rotateInUpLeft">
                                 <Title>
                                     <Design width={40} height={40} className="title logo" />
                                     <span className="title">Frontend</span>
@@ -56,7 +56,7 @@ const MySkillsPage = () => {
                                     </ul>
                                 </Description>
                             </Main>
-                            <Main>
+                            <Main className="animate__animated animate__rotateInUpRight">
                                 <Title>
                                     <Develope className="logo" width={40} height={40} />
                                     <span className="title">Backend</span>
