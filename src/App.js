@@ -7,6 +7,7 @@ import BlogPage from './components/BlogPage'
 import WorkPage from './components/WorkPage'
 import MySkillsPage from './components/MySkillPage'
 import Projects from './components/Projects'
+import "./App.css"
 import {
   Switch,
   Route,

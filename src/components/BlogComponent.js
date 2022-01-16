@@ -53,7 +53,6 @@ background:smokewhite;
 &:hover{
 color:${props => props.theme.body};
 transform :scale(1.1) !important;
-// background-color:${props => props.theme.text};
 background:smokewhite;
 transition:all 0.4s ease;
 }

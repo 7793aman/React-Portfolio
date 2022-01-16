@@ -29,7 +29,7 @@ const ProjectPage = (props) => {
 
     return (
         <ThemeProvider theme={DarkTheme}>
-            <Container>
+            <Container >
                 <ParticleComponent theme='night' />
                 <HeaderContainer>
                     <LogoComponent className="logo" theme='dark' />

@@ -66,7 +66,7 @@ const Main = () => {
 
                 <CenterPanel className='center__panel'>
                     <Center className='center' click={click}>
-                        <YinYang onClick={() => handleClick()}  width={click ? 95 : 175} height={click ? 95 : 175} fill='currentColor' style={{cursor:'pointer'}} />
+                        <YinYang className={click ? 'yin_yang' : ''} onClick={() => handleClick()} width={click ? 95 : 175} height={click ? 95 : 175} fill='currentColor' style={{ cursor: 'pointer' }} />
                         {!click && <h2>Who am I?</h2>}
                     </Center>
                     <CenterBar click={click}>
@@ -165,7 +165,7 @@ height:98vh;
 position:relative;
 padding:0.25rem 2rem;
 h2, h2, h4, h5, h6{
-    font-size:22px !important;
+    font-size:22px;
     font-family:'Karla', sans-serif;
     font-weight:500;
     letter-spacing:1px;

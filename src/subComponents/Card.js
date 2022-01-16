@@ -9,7 +9,7 @@ const Card = (props) => {
 
     const { id, name, description, tags, github } = props.data;
     return (
-        <Box key={id} variants={CardConfig}>
+        <Box key={id} variants={CardConfig} className="projects">
             <Title>{name}</Title>
             <Description>
                 {description}
