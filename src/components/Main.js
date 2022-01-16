@@ -37,7 +37,6 @@ const Main = () => {
                         <Work to="/work" click={click}>
                             <motion.h2
                                 whileTap={{ scale: 0.9 }}
-
                             >
                                 Work
                             </motion.h2>
@@ -228,9 +227,10 @@ display:flex;
 color:${props => props.click ? props.theme.body : props.theme.text};
 text-decoration:none;
 z-index:9;
-transition: transform 0.2s ease-in;
-&:hover{
-    transform:scale(1.1);
+
+h2:hover{
+    transform:scale(1.1) !important;
+    transition: transform 0.2s ease-in !important;
 }
 `
 
@@ -240,8 +240,9 @@ color:${props => props.theme.text};
 text-decoration:none;
 z-index:9;
 transition: transform 0.2s ease-in;
-&:hover{
-    transform:scale(1.1);
+h2:hover{
+    transform:scale(1.1) !important;
+    transition: transform 0.2s ease-in !important;
 }
 `
 
