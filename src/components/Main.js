@@ -100,10 +100,11 @@ const Main = () => {
 
 
 const MainContainer = styled.div`
+overflow:hidden;
 display:flex;
 flex-direction:column;
 background: ${props => props.theme.body};
-height:100vh;
+height:98vh;
 position:relative;
 padding:0.25rem 2rem;
 h2, h2, h4, h5, h6{
@@ -135,6 +136,7 @@ flex:1;
 display:flex;
 flex-direction:row;
 justify-content:space-between;
+height:85vh;
 `
 
 const LeftPanel = styled.div`
@@ -185,8 +187,8 @@ display:flex;
 flex-direction:column;
 align-items:center;
 cursor:pointer;
-transform:${props => props.click ? 'translate(80vw,48vh)' : ''};
-width:${props => props.click ? '15%' : ''};
+transform:${props => props.click ? 'translate(87vw,50vh)' : ''};
+width:${props => props.click ? '0%' : ''};
 transition:all 1s ease;
 
 h2{
@@ -204,7 +206,7 @@ flex:0.1;
 justify-content:space-around;
 align-items:end;
 position:relative;
-bottom:${props => props.click ? '-4.5em' : '-2.75em'};
+bottom:${props => props.click ? '-5em' : '-3.5em'};
 `
 
 const About = styled(NavLink)`
