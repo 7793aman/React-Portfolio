@@ -82,7 +82,6 @@ const Main = () => {
                             <Projects to="/projects" >
                                 <motion.h2
                                     whileTap={{ scale: 0.9 }}
-
                                 >
                                     Projects
                                 </motion.h2>
@@ -92,15 +91,6 @@ const Main = () => {
                             <PersonalInterest to="/blog">
                                 <motion.h2
                                     whileTap={{ scale: 0.9 }}
-                                    initial={{
-                                        y: -200,
-                                        transition: { type: 'spring', duration: 1.5, delay: 0 }
-                                    }}
-
-                                    animate={{
-                                        y: 0,
-                                        transition: { type: 'spring', duration: 1.5, delay: 0 }
-                                    }}
                                 >
                                     Blog
                                 </motion.h2>
