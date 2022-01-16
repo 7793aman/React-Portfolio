@@ -37,7 +37,7 @@ const Main = () => {
                         <Work to="/work" click={click}>
                             <motion.h2
                                 whileTap={{ scale: 0.9 }}
-                             
+
                             >
                                 Work
                             </motion.h2>
@@ -48,10 +48,15 @@ const Main = () => {
                 </LeftPanel>
 
                 <CenterPanel className='center__panel '>
-                    <Center click={click} className={click ? '' : 'animate__animated animate__zoomIn'}>
+                    {!click && <Center click={click} className='animate__animated animate__zoomIn'>
                         <YinYang className={click ? 'yin_yang' : ''} onClick={() => handleClick()} width={click ? 95 : 175} height={click ? 95 : 175} fill='currentColor' style={{ cursor: 'pointer' }} />
                         {!click && <h2>Who am I?</h2>}
-                    </Center>
+                    </Center>}
+
+                    {click && <Center click={click} className='animate__animated animate__zoomIn'>
+                        <YinYang className={click ? 'yin_yang' : ''} onClick={() => handleClick()} width={click ? 95 : 175} height={click ? 95 : 175} fill='currentColor' style={{ cursor: 'pointer' }} />
+                        {!click && <h2>Who am I?</h2>}
+                    </Center>}
                     <CenterBar click={click}>
                         <About to="/about" click={click} className="animate__animated animate__fadeInUp">
                             <motion.h2
@@ -77,7 +82,7 @@ const Main = () => {
                             <Projects to="/projects" >
                                 <motion.h2
                                     whileTap={{ scale: 0.9 }}
-                                   
+
                                 >
                                     Projects
                                 </motion.h2>
@@ -207,7 +212,7 @@ flex-direction:column;
 align-items:center;
 width:${props => props.click ? '0%' : ''};
 margin-top:5em;
-// transition:transform 1s ease-out !important;
+transition:${props => props.click ? 'transform 2s ease-out !important' : ''};
 transform:${props => props.click ? 'translate(87vw,51vh)' : ''};
 h2{
     margin-top:1rem;
