@@ -53,10 +53,12 @@ const Main = () => {
                         {!click && <h2>Who am I?</h2>}
                     </Center>}
 
-                    {click && <Center click={click} className='animate__animated animate__zoomIn'>
+                    {click ? <Center click={click} className='animate__animated animate__zoomIn'>
                         <YinYang className={click ? 'yin_yang' : ''} onClick={() => handleClick()} width={click ? 95 : 175} height={click ? 95 : 175} fill='currentColor' style={{ cursor: 'pointer' }} />
                         {!click && <h2>Who am I?</h2>}
-                    </Center>}
+                    </Center>:''}
+
+
                     <CenterBar click={click}>
                         <About to="/about" click={click} className="animate__animated animate__fadeInUp">
                             <motion.h2
