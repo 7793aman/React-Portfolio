@@ -48,8 +48,8 @@ const Main = () => {
                 </LeftPanel>
 
                 <CenterPanel className='center__panel '>
-                    <Center className='center animate__animated animate__zoomIn' click={click}>
-                        <YinYang  className={click ? 'yin_yang' : ''} onClick={() => handleClick()} width={click ? 95 : 175} height={click ? 95 : 175} fill='currentColor' style={{ cursor: 'pointer' }} />
+                    <Center click={click} className={click ? '' : 'animate__animated animate__zoomIn'}>
+                        <YinYang className={click ? 'yin_yang' : ''} onClick={() => handleClick()} width={click ? 95 : 175} height={click ? 95 : 175} fill='currentColor' style={{ cursor: 'pointer' }} />
                         {!click && <h2>Who am I?</h2>}
                     </Center>
                     <CenterBar click={click}>
@@ -207,7 +207,7 @@ flex-direction:column;
 align-items:center;
 width:${props => props.click ? '0%' : ''};
 margin-top:5em;
-transition:transform 1s ease-out;
+// transition:transform 1s ease-out !important;
 transform:${props => props.click ? 'translate(87vw,51vh)' : ''};
 h2{
     margin-top:1rem;
@@ -216,6 +216,7 @@ h2{
 &>:first-child{
     animation:${rotate} infinite 1.5s linear;
 }
+
 `
 
 const CenterBar = styled.div`
