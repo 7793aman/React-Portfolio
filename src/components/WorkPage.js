@@ -6,6 +6,7 @@ import PowerButton from '../subComponents/PowerButton'
 import SocialIcons from '../subComponents/SocialIcons'
 import ParticleComponent from "../subComponents/ParticleComponent";
 import { Develope } from "../components/AllSvgs";
+import { motion } from "framer-motion";
 
 const WorkPage = () => {
     return (
@@ -22,7 +23,8 @@ const WorkPage = () => {
                     </LeftContainer>
                     <RightContainer className="right__container">
 
-                        <Main className="main__left">
+                        <Main variants={WorkConfig} initial="hidden"
+                            animate="show" className="main__left">
                             <WorkExperience>
                                 <Develope width={50} height={50} />
                             </WorkExperience>
@@ -146,6 +148,19 @@ const WorkPage = () => {
     )
 }
 
+const WorkConfig = {
+    hidden: {
+        scale: 0
+    },
+    show: {
+        scale: 1,
+        transition: {
+            type: 'spring',
+            duration: 2
+        }
+    }
+}
+
 const Container = styled.div`
 background-color:${props => props.theme.body};
 height:100vh;
@@ -189,7 +204,7 @@ align-items:center;
 scrollbar-color: rebeccapurple green;
 
 `
-const Main = styled.div`
+const Main = styled(motion.div)`
 cursor:pointer;
 margin:1em;
 border: 2px solid  ${props => props.theme.text};

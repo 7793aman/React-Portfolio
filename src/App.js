@@ -8,7 +8,6 @@ import WorkPage from './components/WorkPage'
 import MySkillsPage from './components/MySkillPage'
 import Projects from './components/Projects'
 import {
-
   Switch,
   Route,
   useLocation,
@@ -21,10 +20,9 @@ function App() {
   return (
     <>
       <GlobalStyle />
-
       <ThemeProvider theme={lightTheme}>
         <SoundBar />
-        <AnimatePresence exitBeforeEnter>
+        <AnimatePresence initial={true}>
           <Switch location={location} key={location.pathname}>
             <Route exact path="/about" component={AboutPage} />
             <Route exact path="/blog" component={BlogPage} />

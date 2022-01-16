@@ -13,7 +13,12 @@ const AboutPage = () => {
     return (
         <ThemeProvider theme={DarkTheme}>
             <ParticleComponent theme='dark' />
-            <Container>
+            <Container
+                initial="initial"
+                animate="in"
+                exit="out"
+                variants={AboutConfig}
+            >
                 <HeaderContainer>
                     <LogoComponent className="logo" theme='dark' />
                     <PowerButton theme='dark' />
@@ -41,10 +46,10 @@ const AboutPage = () => {
                                 <motion.img src={astronaut} width={265} height={450} alt="spaceman"
                                     initial={{
                                         position: 'relative',
-                                        top: '26em',
+                                        top: '28em',
                                         left: '9em'
                                     }}
-                                    animate={{ top: 0, left: '0em' }}
+                                    animate={{ top: '-2em', left: '-2em' }}
                                     transition={{ type: 'spring', duration: 1.5, delay: 0.5 }}
 
                                 ></motion.img>
@@ -57,7 +62,23 @@ const AboutPage = () => {
     )
 }
 
-const Container = styled.div`
+const AboutConfig = {
+    initial: {
+        opacity: 0,
+    },
+    in: {
+        opacity: 1,
+        transition: {
+            type: 'spring',
+            duration: 1.5,
+        }
+    },
+    out: {
+        opacity: 0,
+    },
+}
+
+const Container = styled(motion.div)`
 overflow:hidden;
 background-color:${props => props.theme.body};
 height:100vh;

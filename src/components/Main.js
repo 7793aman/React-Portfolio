@@ -25,6 +25,16 @@ const Main = () => {
                     <motion.h3
                         whileHover={{ scale: 1.1 }}
                         whileTap={{ scale: 0.9 }}
+                        initial={{
+                            y: -200,
+                            transition: { type: 'spring', duration: 1.5, delay: 0 }
+                        }}
+
+                        animate={{
+                            y: 0,
+                            transition: { type: 'spring', duration: 1.5, delay: 0 }
+                        }}
+
                     >
                         Say hi...
                     </motion.h3>
@@ -35,9 +45,19 @@ const Main = () => {
                 <LeftPanel>
                     <div className='work__content'>
                         <Work to="/work" click={click}>
-                            <h2>
+                            <motion.h2
+                                initial={{
+                                    y: -200,
+                                    transition: { type: 'spring', duration: 1.5, delay: 0 }
+                                }}
+
+                                animate={{
+                                    y: 0,
+                                    transition: { type: 'spring', duration: 1.5, delay: 0}
+                                }}
+                            >
                                 Work
-                            </h2>
+                            </motion.h2>
                         </Work>
                     </div>
 
@@ -51,17 +71,34 @@ const Main = () => {
                     </Center>
                     <CenterBar click={click}>
                         <About to="/about" click={click}>
-                            <h2
-                               
+                            <motion.h2
+                                initial={{
+                                    y: 200,
+                                    transition: { type: 'spring', duration: 1.5, delay: 0 }
+                                }}
+
+                                animate={{
+                                    y: 0,
+                                    transition: { type: 'spring', duration: 1.5, delay: 0 }
+                                }}
                             >
                                 About
-                            </h2>
+                            </motion.h2>
                         </About>
                         <Skills to="/skills">
-                            <h2
+                            <motion.h2
+                                initial={{
+                                    y: 200,
+                                    transition: { type: 'spring', duration: 1.5, delay: 0}
+                                }}
+
+                                animate={{
+                                    y: 0,
+                                    transition: { type: 'spring', duration: 1.5, delay: 0 }
+                                }}
                             >
                                 My Skills
-                            </h2>
+                            </motion.h2>
                         </Skills>
                     </CenterBar>
 
@@ -71,17 +108,36 @@ const Main = () => {
                     <RightPanelContent>
                         <div className='project__content'>
                             <Projects to="/projects">
-                                <h2
+                                <motion.h2
+                                    initial={{
+                                        y: -200,
+                                        transition: { type: 'spring', duration: 1.5, delay: 0 }
+                                    }}
+
+                                    animate={{
+                                        y: 0,
+                                        transition: { type: 'spring', duration: 1.5, delay: 0}
+                                    }}
                                 >
                                     Projects
-                                </h2>
+                                </motion.h2>
                             </Projects>
                         </div>
                         <div className='interest__content'>
                             <PersonalInterest to="/blog">
-                                <h2>
+                                <motion.h2
+                                    initial={{
+                                        y: -200,
+                                        transition: { type: 'spring', duration: 1.5, delay: 0 }
+                                    }}
+
+                                    animate={{
+                                        y: 0,
+                                        transition: { type: 'spring', duration: 1.5, delay: 0}
+                                    }}
+                                >
                                     Blog
-                                </h2>
+                                </motion.h2>
                             </PersonalInterest>
                         </div>
 
@@ -248,7 +304,7 @@ const PersonalInterest = styled(NavLink)`
 color:${props => props.theme.text};
 text-decoration:none;
 z-index:9;
-h2{
+
 transform:rotate(90deg);
 display:block;
 transition: transform 0.2s ease-in;

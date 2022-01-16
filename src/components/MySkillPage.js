@@ -6,12 +6,19 @@ import LogoComponent from "../subComponents/LogoComponent"
 import PowerButton from '../subComponents/PowerButton'
 import SocialIcons from '../subComponents/SocialIcons'
 import ParticleComponent from "../subComponents/ParticleComponent";
+import { motion } from 'framer-motion'
+
 
 const MySkillsPage = () => {
     return (
         <ThemeProvider theme={lightTheme}>
             <ParticleComponent theme='light' />
-            <Container>
+            <Container
+                initial="initial"
+                animate="in"
+                exit="out"
+                variants={SkillConfig}
+            >
                 <HeaderContainer>
                     <LogoComponent theme='light' />
                     <PowerButton />
@@ -84,7 +91,23 @@ const MySkillsPage = () => {
     )
 }
 
-const Container = styled.div`
+const SkillConfig = {
+    initial: {
+        opacity: 0,
+    },
+    in: {
+        opacity: 1,
+        transition: {
+            type: 'spring',
+            duration: 1.5
+        }
+    },
+    out: {
+        opacity: 0,
+    },
+}
+
+const Container = styled(motion.div)`
 background-color:${props => props.theme.body};
 height:auto;
 padding:0 2rem 0 2rem;
