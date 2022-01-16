@@ -65,8 +65,8 @@ const Main = () => {
                 </LeftPanel>
 
                 <CenterPanel className='center__panel'>
-                    <Center onClick={() => handleClick()} click={click} className='center'>
-                        <YinYang width={click ? 95 : 175} height={click ? 95 : 175} fill='currentColor' />
+                    <Center className='center' click={click}>
+                        <YinYang onClick={() => handleClick()}  width={click ? 95 : 175} height={click ? 95 : 175} fill='currentColor' style={{cursor:'pointer'}} />
                         {!click && <h2>Who am I?</h2>}
                     </Center>
                     <CenterBar click={click}>
@@ -237,7 +237,7 @@ transform:rotate(360deg);
 const CenterPanel = styled.div`
 display:flex;
 flex-direction:column;
-justify-content:space-around;
+justify-content:space-between;
 flex:${props => props.click ? '0' : 'auto'};
 `
 
@@ -248,11 +248,10 @@ position:relative;
 display:flex;
 flex-direction:column;
 align-items:center;
-cursor:pointer;
-transform:${props => props.click ? 'translate(87vw,50vh)' : ''};
 width:${props => props.click ? '0%' : ''};
-transition:all 1s ease;
-
+margin-top:5em;
+transition:transform 1s ease-out;
+transform:${props => props.click ? 'translate(87vw,51vh)' : ''};
 h2{
     margin-top:1rem;
 }
@@ -264,11 +263,9 @@ h2{
 
 const CenterBar = styled.div`
 display:flex;
-flex:0.1;
 justify-content:space-around;
-align-items:end;
+align-items:center;
 position:relative;
-bottom:${props => props.click ? '-5em' : '-3.5em'};
 `
 
 const About = styled(NavLink)`

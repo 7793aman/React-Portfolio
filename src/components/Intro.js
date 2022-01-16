@@ -35,7 +35,7 @@ const Intro = () => {
 const Box = styled(motion.div)`
 position:absolute;
 left:49%;
-top:50%;
+top:53%;
 transform :translate(-50%, -50%);
 width:56%;
 height:18rem;
