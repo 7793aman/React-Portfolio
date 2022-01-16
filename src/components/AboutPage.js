@@ -42,7 +42,7 @@ const AboutPage = () => {
                                     initial={{
                                         position: 'relative',
                                         top: '26em',
-                                        left: '10em'
+                                        left: '9em'
                                     }}
                                     animate={{ top: 0, left: '0em' }}
                                     transition={{ type: 'spring', duration: 1.5, delay: 0.5 }}
@@ -58,6 +58,7 @@ const AboutPage = () => {
 }
 
 const Container = styled.div`
+overflow:hidden;
 background-color:${props => props.theme.body};
 height:100vh;
 padding:0 2rem 0 2rem;
@@ -96,7 +97,7 @@ z-index:3;
 line-height:1.5;
 display:flex;
 flex-direction:column;
-font-size: calc(1.5vw);
+font-size: 1.5vw;
 backdrop-filter:blur(4px);
 justify-content:space-around;
 font-family:'Ubuntu Mono', monospace;
