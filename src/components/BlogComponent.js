@@ -7,7 +7,8 @@ const BlogComponent = (props) => {
     const { name, tags, link, imgSrc } = props.blog;
     return (
 
-        <Box target="_blank" to={{ pathname: link }} variants={BlogComponentConfig}>
+        <Box target="_blank" to={{ pathname: link }} variants={BlogComponentConfig}
+            >
             <Image img={imgSrc} />
             <Title>{name}</Title>
             <HashTags>

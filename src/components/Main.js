@@ -21,19 +21,10 @@ const Main = () => {
             <HeaderPanel>
                 <LogoComponent theme={click ? 'dark' : 'light'} />
                 <PowerButton />
-                <Contact target="_blank" to={{ pathname: "mailto:amanj@vt.edu" }}>
+                <Contact target="_blank" to={{ pathname: "mailto:amanj@vt.edu" }}
+                    className="animate__animated animate__fadeInDown">
                     <motion.h3
                         whileTap={{ scale: 0.9 }}
-                        initial={{
-                            y: -200,
-                            transition: { type: 'spring', duration: 1.5, delay: 0 }
-                        }}
-
-                        animate={{
-                            y: 0,
-                            transition: { type: 'spring', duration: 1.5, delay: 0 }
-                        }}
-
                     >
                         Say hi...
                     </motion.h3>
@@ -42,19 +33,11 @@ const Main = () => {
 
             <BodyPanel >
                 <LeftPanel>
-                    <div className='work__content'>
+                    <div className='work__content animate__animated animate__fadeInLeft'>
                         <Work to="/work" click={click}>
                             <motion.h2
                                 whileTap={{ scale: 0.9 }}
-                                initial={{
-                                    y: -200,
-                                    transition: { type: 'spring', duration: 1.5, delay: 0 }
-                                }}
-
-                                animate={{
-                                    y: 0,
-                                    transition: { type: 'spring', duration: 1.5, delay: 0 }
-                                }}
+                             
                             >
                                 Work
                             </motion.h2>
@@ -70,34 +53,16 @@ const Main = () => {
                         {!click && <h2>Who am I?</h2>}
                     </Center>
                     <CenterBar click={click}>
-                        <About to="/about" click={click}>
+                        <About to="/about" click={click} className="animate__animated animate__fadeInUp">
                             <motion.h2
                                 whileTap={{ scale: 0.9 }}
-                                initial={{
-                                    y: 200,
-                                    transition: { type: 'spring', duration: 1.5, delay: 0 }
-                                }}
-
-                                animate={{
-                                    y: 0,
-                                    transition: { type: 'spring', duration: 1.5, delay: 0 }
-                                }}
                             >
                                 About
                             </motion.h2>
                         </About>
-                        <Skills to="/skills">
+                        <Skills to="/skills" className="animate__animated animate__fadeInUp">
                             <motion.h2
                                 whileTap={{ scale: 0.9 }}
-                                initial={{
-                                    y: 200,
-                                    transition: { type: 'spring', duration: 1.5, delay: 0 }
-                                }}
-
-                                animate={{
-                                    y: 0,
-                                    transition: { type: 'spring', duration: 1.5, delay: 0 }
-                                }}
                             >
                                 My Skills
                             </motion.h2>
@@ -108,25 +73,17 @@ const Main = () => {
 
                 <RightPanel className='right__panel'>
                     <RightPanelContent>
-                        <div className='project__content'>
-                            <Projects to="/projects">
+                        <div className='project__content' className="animate__animated animate__fadeInRight">
+                            <Projects to="/projects" >
                                 <motion.h2
                                     whileTap={{ scale: 0.9 }}
-                                    initial={{
-                                        y: -200,
-                                        transition: { type: 'spring', duration: 1.5, delay: 0 }
-                                    }}
-
-                                    animate={{
-                                        y: 0,
-                                        transition: { type: 'spring', duration: 1.5, delay: 0 }
-                                    }}
+                                   
                                 >
                                     Projects
                                 </motion.h2>
                             </Projects>
                         </div>
-                        <div className='interest__content'>
+                        <div className='interest__content' className="animate__animated animate__fadeInRight">
                             <PersonalInterest to="/blog">
                                 <motion.h2
                                     whileTap={{ scale: 0.9 }}
