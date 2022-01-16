@@ -63,7 +63,7 @@ color:${props => props.theme.text};
 
 
 const Box = styled(motion.li)`
-z-index:999;
+z-index:9;
 width: 18rem;
 height:43vh;
 background-color: ${props => props.theme.text};
@@ -76,9 +76,9 @@ flex-direction:column;
 justify-content: space-between;
 border:1px solid ${prop => prop.theme.body};
 transition: all 0.5s ease;
-cursor:pointer;
-&: hover{
-    transform:scale(1.1);
+
+:hover{
+    transform:scale(1.1) !important;
     background-color:${props => props.theme.body};
     color:${props => props.theme.text};
     border: 1px solid ${props => props.theme.text};
@@ -125,6 +125,7 @@ const Footer = styled.footer`
 display:flex;
 justify-content:center;
 align-items:end;
+cursor:pointer;
 `
 
 

@@ -20,7 +20,7 @@ const ProjectPage = (props) => {
 
         const rotate = () => {
             if (element) { element.style.transform = `translateX(${-window.pageYOffset}px)` };
-            if (yinyang.current) { yinyang.current.style.transform = `rotate(` + -window.pageYOffset + 'deg)' };
+            if (yinyang.current) { yinyang.current.style.transform = `rotate(` + window.pageYOffset + 'deg)' };
         }
 
         window.addEventListener('scroll', rotate);
@@ -86,18 +86,16 @@ right:2rem;
 left:2rem;
 display:flex;
 height:15vh;
-z-index:99999999;
+z-index:9;
 align-items:center;
-justify-content:space=between;
+justify-content:space-between;
 `
 
 const CenterContainer = styled.div`
 display:flex;
-z-index:9999;
 height:100%;
 `
 const RightContainer = styled.div`
-flex:1;
 display:flex;
 align-items:flex-start;
 justify-content:flex-start;
@@ -105,7 +103,7 @@ position:relative;
 `
 
 const LeftContainer = styled.div`
-flex:0.1;
+
 `
 
 const Main = styled(motion.ul)`
@@ -123,7 +121,6 @@ display:block;
 position:fixed;
 bottom:1rem;
 right:1rem;
-z-index:99999;
 `
 
 export default ProjectPage
