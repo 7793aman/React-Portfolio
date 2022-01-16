@@ -23,7 +23,6 @@ const Main = () => {
                 <PowerButton />
                 <Contact target="_blank" to={{ pathname: "mailto:amanj@vt.edu" }}>
                     <motion.h3
-                        whileHover={{ scale: 1.1 }}
                         whileTap={{ scale: 0.9 }}
                         initial={{
                             y: -200,
@@ -46,6 +45,7 @@ const Main = () => {
                     <div className='work__content'>
                         <Work to="/work" click={click}>
                             <motion.h2
+                                whileTap={{ scale: 0.9 }}
                                 initial={{
                                     y: -200,
                                     transition: { type: 'spring', duration: 1.5, delay: 0 }
@@ -53,7 +53,7 @@ const Main = () => {
 
                                 animate={{
                                     y: 0,
-                                    transition: { type: 'spring', duration: 1.5, delay: 0}
+                                    transition: { type: 'spring', duration: 1.5, delay: 0 }
                                 }}
                             >
                                 Work
@@ -65,13 +65,14 @@ const Main = () => {
                 </LeftPanel>
 
                 <CenterPanel className='center__panel'>
-                    <Center onClick={() => handleClick()} click={click} className='center' width={click ? 95 : 175} height={click ? 95 : 175}>
+                    <Center onClick={() => handleClick()} click={click} className='center'>
                         <YinYang width={click ? 95 : 175} height={click ? 95 : 175} fill='currentColor' />
                         {!click && <h2>Who am I?</h2>}
                     </Center>
                     <CenterBar click={click}>
                         <About to="/about" click={click}>
                             <motion.h2
+                                whileTap={{ scale: 0.9 }}
                                 initial={{
                                     y: 200,
                                     transition: { type: 'spring', duration: 1.5, delay: 0 }
@@ -87,9 +88,10 @@ const Main = () => {
                         </About>
                         <Skills to="/skills">
                             <motion.h2
+                                whileTap={{ scale: 0.9 }}
                                 initial={{
                                     y: 200,
-                                    transition: { type: 'spring', duration: 1.5, delay: 0}
+                                    transition: { type: 'spring', duration: 1.5, delay: 0 }
                                 }}
 
                                 animate={{
@@ -109,6 +111,7 @@ const Main = () => {
                         <div className='project__content'>
                             <Projects to="/projects">
                                 <motion.h2
+                                    whileTap={{ scale: 0.9 }}
                                     initial={{
                                         y: -200,
                                         transition: { type: 'spring', duration: 1.5, delay: 0 }
@@ -116,7 +119,7 @@ const Main = () => {
 
                                     animate={{
                                         y: 0,
-                                        transition: { type: 'spring', duration: 1.5, delay: 0}
+                                        transition: { type: 'spring', duration: 1.5, delay: 0 }
                                     }}
                                 >
                                     Projects
@@ -126,6 +129,7 @@ const Main = () => {
                         <div className='interest__content'>
                             <PersonalInterest to="/blog">
                                 <motion.h2
+                                    whileTap={{ scale: 0.9 }}
                                     initial={{
                                         y: -200,
                                         transition: { type: 'spring', duration: 1.5, delay: 0 }
@@ -133,7 +137,7 @@ const Main = () => {
 
                                     animate={{
                                         y: 0,
-                                        transition: { type: 'spring', duration: 1.5, delay: 0}
+                                        transition: { type: 'spring', duration: 1.5, delay: 0 }
                                     }}
                                 >
                                     Blog
@@ -182,6 +186,11 @@ color:${props => props.theme.text};
 text-decoration:none;
 font-size:18px;
 z-index:9;
+transition: transform 0.2s ease-in;
+
+&:hover{
+    transform:scale(1.1);
+}
 `
 
 const BodyPanel = styled.div`
@@ -229,7 +238,7 @@ const CenterPanel = styled.div`
 display:flex;
 flex-direction:column;
 justify-content:space-around;
-flex:auto;
+flex:${props => props.click ? '0' : 'auto'};
 `
 
 
