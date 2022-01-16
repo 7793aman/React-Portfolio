@@ -64,9 +64,9 @@ const Main = () => {
                     <SocialIcons className="social__content" theme={click ? 'dark' : 'light'} />
                 </LeftPanel>
 
-                <CenterPanel className='center__panel'>
-                    <Center className='center' click={click}>
-                        <YinYang className={click ? 'yin_yang' : ''} onClick={() => handleClick()} width={click ? 95 : 175} height={click ? 95 : 175} fill='currentColor' style={{ cursor: 'pointer' }} />
+                <CenterPanel className='center__panel '>
+                    <Center className='center animate__animated animate__zoomIn' click={click}>
+                        <YinYang  className={click ? 'yin_yang' : ''} onClick={() => handleClick()} width={click ? 95 : 175} height={click ? 95 : 175} fill='currentColor' style={{ cursor: 'pointer' }} />
                         {!click && <h2>Who am I?</h2>}
                     </Center>
                     <CenterBar click={click}>

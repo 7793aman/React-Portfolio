@@ -8,7 +8,7 @@ import SocialIcons from '../subComponents/SocialIcons'
 import ParticleComponent from "../subComponents/ParticleComponent";
 import astronaut from "../assets/Images/Astronaut.png"
 import { motion } from 'framer-motion'
-
+import 'animate.css';
 const AboutPage = () => {
     return (
         <ThemeProvider theme={DarkTheme}>
@@ -20,7 +20,8 @@ const AboutPage = () => {
                 variants={AboutConfig}
             >
                 <HeaderContainer>
-                    <LogoComponent className="logo" theme='dark' />
+                    <LogoComponent
+                        assName="logo" theme='dark' />
                     <PowerButton theme='dark' />
                 </HeaderContainer>
                 <CenterContainer className="center__container">
@@ -28,8 +29,8 @@ const AboutPage = () => {
                         <SocialIcons theme='dark' />
                     </LeftContainer>
                     <RightContainer>
-                        <Main>
-                            <div>
+                        <Main className="animate__animated animate__tada">
+                            <div >
                                 As a kid, I was always curious and creative. I broke toys apart only to build them up all over again. I still do the same, only through code now. I am truly passionate about writing code and building stuff that can solve real world problems.
                             </div>
                             <br></br>

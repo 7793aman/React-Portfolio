@@ -8,6 +8,7 @@ import WorkPage from './components/WorkPage'
 import MySkillsPage from './components/MySkillPage'
 import Projects from './components/Projects'
 import "./App.css"
+import 'animate.css';
 import {
   Switch,
   Route,
