@@ -78,7 +78,7 @@ const Main = () => {
 
                 <RightPanel className='right__panel'>
                     <RightPanelContent>
-                        <div className='project__content' className="animate__animated animate__fadeInRight">
+                        <div className='project__content animate__animated animate__fadeInRight'>
                             <Projects to="/projects" >
                                 <motion.h2
                                     whileTap={{ scale: 0.9 }}
@@ -87,7 +87,7 @@ const Main = () => {
                                 </motion.h2>
                             </Projects>
                         </div>
-                        <div className='interest__content' className="animate__animated animate__fadeInRight">
+                        <div className='interest__content animate__animated animate__fadeInRight'>
                             <PersonalInterest to="/blog">
                                 <motion.h2
                                     whileTap={{ scale: 0.9 }}

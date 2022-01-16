@@ -24,7 +24,7 @@ function App() {
       <GlobalStyle />
       <ThemeProvider theme={lightTheme}>
         <SoundBar />
-        <AnimatePresence initial={true}>
+        <AnimatePresence>
           <Switch location={location} key={location.pathname}>
             <Route exact path="/about" component={AboutPage} />
             <Route exact path="/blog" component={BlogPage} />
