@@ -14,7 +14,7 @@ const Intro = () => {
                 <Text>
                     <h1>Hi,</h1>
                     <h3>I'm Aman Jain</h3>
-                    <p>I am currently pursuing my Master's at Virginia Tech and have four years of exprience as a full-stack developer.</p>
+                    <p>I am currently pursuing Master's at Virginia Tech and have four years of exprience as a full-stack developer.</p>
                 </Text>
             </SubBox>
             <SubBox>
