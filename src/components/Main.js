@@ -72,7 +72,7 @@ const Main = () => {
                             <motion.h2
                                 whileTap={{ scale: 0.9 }}
                             >
-                                My Skills
+                                Skills
                             </motion.h2>
                         </Skills>
                     </CenterBar>
