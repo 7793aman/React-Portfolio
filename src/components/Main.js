@@ -8,6 +8,7 @@ import { YinYang } from './AllSvgs'
 import Intro from './Intro.js'
 import { motion } from 'framer-motion'
 import "../App.css"
+import "normalize.css"
 const Main = () => {
 
     const [click, setClick] = useState(0);
@@ -43,11 +44,11 @@ const Main = () => {
                         </Work>
                     </div>
                     <div className="social__content">
-                        <SocialIcons  theme={click ? 'dark' : 'light'} />
+                        <SocialIcons theme={click ? 'dark' : 'light'} />
                     </div>
                 </LeftPanel>
 
-                <CenterPanel className='center__panel '>
+                <CenterPanel className='center__panel ' click={click}>
                     {!click && <Center click={click} className='animate__animated animate__zoomIn yin_yang'>
                         <YinYang onClick={() => handleClick()} width={click ? 95 : 175} height={click ? 95 : 175} fill='currentColor' style={{ cursor: 'pointer' }} />
                         {!click && <h2>Who am I?</h2>}
@@ -153,6 +154,7 @@ display:flex;
 flex-direction:row;
 justify-content:space-between;
 height:85vh;
+position:relative;
 `
 
 const LeftPanel = styled.div`
@@ -191,21 +193,24 @@ transform:rotate(360deg);
 const CenterPanel = styled.div`
 display:flex;
 flex-direction:column;
-justify-content:space-between;
-flex:${props => props.click ? '0' : 'auto'};
+justify-content:${props => props.click ? 'end' : 'space-between'};
+flex:auto;
 `
 
 
 const Center = styled.div`
 z-index:9;
-position:relative;
 display:flex;
 flex-direction:column;
 align-items:center;
 width:${props => props.click ? '0%' : ''};
 margin-top:5em;
-transition:${props => props.click ? 'transform 2s ease-out !important' : ''};
-transform:${props => props.click ? 'translate(87vw,51vh)' : ''};
+position:${props => props.click ? "absolute" : ""};
+bottom:${props => props.click ? "1vh" : ""};
+right:${props => props.click ? "1em" : ""};
+
+margin-right:${props => props.click ? '2vw' : ''};
+
 h2{
     margin-top:1rem;
 }

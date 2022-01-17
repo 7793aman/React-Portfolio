@@ -117,7 +117,8 @@
 
 @media screen and (max-width: 800px) {
   .yin_yang .prefix__svg-inline--fa {
-    width: 200px !important;
+    width: 100px !important;
+    height: auto;
   }
 
   h1, h3, h2 {
