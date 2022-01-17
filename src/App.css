@@ -1,29 +1,31 @@
 @media screen and (max-width: 1200px) {
 
   .projects__main {
-    top: 6rem !important
+    top: 11rem !important
   }
+
+  .projects {
+    height: 13rem !important;
+    width: 15rem !important;
+  }
+
 
   .projects__main h2 {
-    font-size: 24px !important;
-  }
-
-  .projects__main h4 {
     font-size: 18px !important;
   }
 
-  .projects__main span {
+  .projects__main h4 {
     font-size: 14px !important;
+  }
+
+  .projects__main span {
+    font-size: 12px !important;
   }
 
   .projects__button {
     font-size: 16px !important;
   }
 
-  .projects {
-    height: 17rem !important;
-    width: 18rem !important;
-  }
 
   .projects__icons span {
     height: 0 !important;
@@ -83,6 +85,13 @@
     height: 68vh;
   }
 
+
+
+
+}
+
+@media screen and (max-width: 900px) {
+
   .blog {
     display: flex !important;
     flex-direction: column;
@@ -101,14 +110,12 @@
   }
 
   .blog__right {
-    padding: 4rem 12rem !important;
+    margin-left: 2rem;
   }
 
   .first__details {
     flex-direction: column !important;
   }
-
-
 }
 
 @media screen and (max-width: 800px) {
