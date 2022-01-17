@@ -7,7 +7,7 @@ import { NavLink } from 'react-router-dom'
 import { YinYang } from './AllSvgs'
 import Intro from './Intro.js'
 import { motion } from 'framer-motion'
-
+import "../App.css"
 const Main = () => {
 
     const [click, setClick] = useState(0);
@@ -42,23 +42,24 @@ const Main = () => {
                             </motion.h2>
                         </Work>
                     </div>
-
-                    <SocialIcons className="social__content" theme={click ? 'dark' : 'light'} />
+                    <div className="social__content">
+                        <SocialIcons  theme={click ? 'dark' : 'light'} />
+                    </div>
                 </LeftPanel>
 
                 <CenterPanel className='center__panel '>
-                    {!click && <Center click={click} className='animate__animated animate__zoomIn'>
-                        <YinYang className={click ? 'yin_yang' : ''} onClick={() => handleClick()} width={click ? 95 : 175} height={click ? 95 : 175} fill='currentColor' style={{ cursor: 'pointer' }} />
+                    {!click && <Center click={click} className='animate__animated animate__zoomIn yin_yang'>
+                        <YinYang onClick={() => handleClick()} width={click ? 95 : 175} height={click ? 95 : 175} fill='currentColor' style={{ cursor: 'pointer' }} />
                         {!click && <h2>Who am I?</h2>}
                     </Center>}
 
                     {click ? <Center click={click} className='animate__animated animate__zoomIn'>
-                        <YinYang className={click ? 'yin_yang' : ''} onClick={() => handleClick()} width={click ? 95 : 175} height={click ? 95 : 175} fill='currentColor' style={{ cursor: 'pointer' }} />
+                        <YinYang onClick={() => handleClick()} width={click ? 95 : 175} height={click ? 95 : 175} fill='currentColor' style={{ cursor: 'pointer' }} />
                         {!click && <h2>Who am I?</h2>}
-                    </Center>:''}
+                    </Center> : ''}
 
 
-                    <CenterBar click={click}>
+                    <CenterBar click={click} className='center__bar'>
                         <About to="/about" click={click} className="animate__animated animate__fadeInUp">
                             <motion.h2
                                 whileTap={{ scale: 0.9 }}

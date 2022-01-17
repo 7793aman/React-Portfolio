@@ -1,3 +1,35 @@
+@media screen and (max-width: 1200px) {
+
+  .projects__main {
+    top: 6rem !important
+  }
+
+  .projects__main h2 {
+    font-size: 24px !important;
+  }
+
+  .projects__main h4 {
+    font-size: 18px !important;
+  }
+
+  .projects__main span {
+    font-size: 14px !important;
+  }
+
+  .projects__button {
+    font-size: 16px !important;
+  }
+
+  .projects {
+    height: 17rem !important;
+    width: 18rem !important;
+  }
+
+  .projects__icons span {
+    height: 0 !important;
+  }
+}
+
 @media screen and (max-width: 1000px) {
 
   .sound__bar {
@@ -11,6 +43,7 @@
 
 
   .about__right {
+    margin-left: 4rem;
     justify-content: none;
     flex-direction: column;
   }
@@ -25,10 +58,12 @@
   .spaceman>img {
     position: unset;
     margin-top: 4rem;
-    height: auto;
-    width: 175px;
+    height: 300px !important;
+    width: 200px;
 
   }
+
+
 }
 
 @media screen and (max-width: 700px) {
@@ -73,32 +108,46 @@
     flex-direction: column !important;
   }
 
-  .projects__main {
-    top: 6rem !important
+
+
+
+}
+
+@media screen and (max-width: 800px) {
+  .yin_yang .prefix__svg-inline--fa {
+    width: 200px !important;
   }
 
-  .projects__main h2 {
+  h1, h3, h2 {
+    font-size: 18px !important;
+  }
+
+  img {
+    width: 200px !important;
+    height: 250px !important;
+  }
+
+  .intro__content>h1 {
+    font-size: 18px !important;
+  }
+
+  .intro__content>h3 {
     font-size: 16px !important;
   }
 
-  .projects__main h4 {
-    font-size: 12px !important;
+  .intro__content>p {
+    font-size: 14px !important;
   }
 
-  .projects__main span {
-    font-size: 10px !important;
+  .center__bar {
+    flex-direction: column !important;
   }
 
-  .projects__button {
-    font-size: 10px !important;
+  .center__bar>a {
+    margin-top: 1rem;
   }
 
-  .projects {
-    height: 39vh !important;
-    width: 55vw !important;
-  }
-
-  .projects__icons span{
-height: 0 !important;
+  .social__content span {
+    height: 4rem !important;
   }
 }
