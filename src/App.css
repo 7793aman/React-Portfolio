@@ -115,7 +115,7 @@
   }
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 700px) {
   .yin_yang .prefix__svg-inline--fa {
     width: 100px !important;
     height: auto;
@@ -125,9 +125,23 @@
     font-size: 18px !important;
   }
 
+  .intro__box {
+    height: 60vh !important;
+    display: flex;
+    flex-direction: column !important;
+
+    background: linear-gradient(to top,
+      #FCF6F4 50%,
+      #000000 50%) right,
+    linear-gradient(to top,
+      #FCF6F4 50%,
+       #000000
+      50%) right !important;
+  }
+
   img {
-    width: 200px !important;
-    height: 250px !important;
+    width: 175px !important;
+    height: auto;
   }
 
   .intro__content>h1 {

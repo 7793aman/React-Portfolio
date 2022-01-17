@@ -2,10 +2,11 @@ import React from "react";
 import styled from 'styled-components'
 import Me from '../assets/Images/profile-img.png'
 import { motion } from 'framer-motion'
+import "animate.css";
 
 const Intro = () => {
     return (
-        <Box
+        <Box className="intro__box"
             initial={{ height: 0 }}
             animate={{ height: '18em' }}
             transition={{ type: 'spring', duration: 2, delay: 1 }}
