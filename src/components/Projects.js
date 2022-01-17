@@ -10,6 +10,7 @@ import { Projects } from "../data/ProjectData";
 import Card from "../subComponents/Card"
 import { YinYang } from "./AllSvgs";
 import { motion } from "framer-motion";
+import "../App.css"
 
 const ProjectPage = (props) => {
     const ref = useRef(null);
@@ -36,12 +37,12 @@ const ProjectPage = (props) => {
                     <PowerButton theme='dark' />
                 </HeaderContainer>
                 <CenterContainer className="center__container">
-                    <LeftContainer>
-                        <SocialIcons theme='dark' />
+                    <LeftContainer className="projects__icons">
+                        <SocialIcons  theme='dark' />
                     </LeftContainer>
                     <RightContainer>
                         <Main ref={ref} variants={FramerConfig} initial="hidden"
-                            animate="show">
+                            animate="show" className="projects__main">
                             {
                                 Projects.map(d =>
                                     <Card key={d.id} data={d} theme="dark" />

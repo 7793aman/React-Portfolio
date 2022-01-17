@@ -1,14 +1,104 @@
-@media screen and (max-width: 600px) {
-  * {
-    font-size: 18px;
+@media screen and (max-width: 1000px) {
+
+  .sound__bar {
+    display: none !important;
   }
 
-  p {
-    font-size: 12px;
+
+  .about__container {
+    overflow: scroll !important;
   }
 
-  img {
-    width: 200px;
-    height: 300px;
+
+  .about__right {
+    justify-content: none;
+    flex-direction: column;
+  }
+
+  .about__main {
+    margin-top: 2rem;
+    font-size: 14px !important;
+    height: 95vh !important;
+    justify-content: space-evenly !important;
+  }
+
+  .spaceman>img {
+    position: unset;
+    margin-top: 4rem;
+    height: auto;
+    width: 175px;
+
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .box {
+    flex-direction: column;
+    height: auto !important;
+    overflow: scroll;
+  }
+
+  .box>.main__left {
+    margin: 3em;
+    height: 68vh;
+  }
+
+  .box>.main__right {
+    margin: 3em;
+    height: 68vh;
+  }
+
+  .blog {
+    display: flex !important;
+    flex-direction: column;
+  }
+
+  .blog__body {
+    justify-content: start !important;
+  }
+
+  .blog__image {
+    height: 4rem !important;
+  }
+
+  .blog__header {
+    position: unset !important;
+  }
+
+  .blog__right {
+    padding: 4rem 12rem !important;
+  }
+
+  .first__details {
+    flex-direction: column !important;
+  }
+
+  .projects__main {
+    top: 6rem !important
+  }
+
+  .projects__main h2 {
+    font-size: 16px !important;
+  }
+
+  .projects__main h4 {
+    font-size: 12px !important;
+  }
+
+  .projects__main span {
+    font-size: 10px !important;
+  }
+
+  .projects__button {
+    font-size: 10px !important;
+  }
+
+  .projects {
+    height: 39vh !important;
+    width: 55vw !important;
+  }
+
+  .projects__icons span{
+height: 0 !important;
   }
 }

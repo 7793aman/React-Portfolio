@@ -7,7 +7,7 @@ import { motion } from 'framer-motion'
 
 const SocialIcons = (props) => {
     return (
-        <Icon className="animate__animated  animate__fadeInUp">
+        <Icon className=" animate__animated  animate__fadeInUp">
             <motion.div
                 whileHover={{ scale: 1.2 }}
                 whileTap={{ scale: 0.9 }}

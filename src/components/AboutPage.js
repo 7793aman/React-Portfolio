@@ -13,7 +13,7 @@ const AboutPage = () => {
     return (
         <ThemeProvider theme={DarkTheme}>
             <ParticleComponent theme='dark' />
-            <Container
+            <Container className="about__container"
                 initial="initial"
                 animate="in"
                 exit="out"
@@ -28,8 +28,8 @@ const AboutPage = () => {
                     <LeftContainer>
                         <SocialIcons theme='dark' />
                     </LeftContainer>
-                    <RightContainer>
-                        <Main className="animate__animated animate__tada">
+                    <RightContainer className="about__right">
+                        <Main className="about__main animate__animated animate__tada">
                             <div >
                                 As a kid, I was always curious and creative. I broke toys apart only to build them up all over again. I still do the same, only through code now. I am truly passionate about writing code and building stuff that can solve real world problems.
                             </div>
@@ -43,7 +43,7 @@ const AboutPage = () => {
                             </div>
                         </Main>
                         <Box>
-                            <Spaceman>
+                            <Spaceman className="spaceman">
                                 <motion.img src={astronaut} width={265} height={450} alt="spaceman"
                                     initial={{
                                         position: 'relative',

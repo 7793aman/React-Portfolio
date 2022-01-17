@@ -9,7 +9,7 @@ const BlogComponent = (props) => {
 
         <Box target="_blank" to={{ pathname: link }} variants={BlogComponentConfig}
             >
-            <Image img={imgSrc} />
+            <Image img={imgSrc} className="blog__image"/>
             <Title>{name}</Title>
             <HashTags>
                 {

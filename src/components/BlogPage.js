@@ -21,16 +21,16 @@ const BlogPage = () => {
 
             <Container className='container'>
                 <ParticleComponent className="particle__component" theme='snow' />
-                <HeaderContainer className='header__container'>
+                <HeaderContainer className='header__container blog__header'>
                     <LogoComponent theme="dark" />
                     <PowerButton />
                 </HeaderContainer>
-                <BodyContainer className='body__container'>
+                <BodyContainer className='body__container blog__body'>
                     <LeftContainer className="left__container">
                         <SocialIcons theme="dark" />
                     </LeftContainer>
-                    <CenterContainer className='center__container'>
-                        <Grid>
+                    <CenterContainer className='center__container blog__right'>
+                        <Grid className='blog'>
                             {
                                 Blogs.map(blog => {
                                     return <BlogComponent key={blog.id} blog={blog} />

@@ -7,7 +7,7 @@ import PowerButton from '../subComponents/PowerButton'
 import SocialIcons from '../subComponents/SocialIcons'
 import ParticleComponent from "../subComponents/ParticleComponent";
 import { motion } from 'framer-motion'
-
+import "../App.css";
 
 const MySkillsPage = () => {
     return (
@@ -24,11 +24,11 @@ const MySkillsPage = () => {
                     <PowerButton />
                 </HeaderContainer>
                 <CenterContainer className="center__container">
-                    <LeftContainer>
-                        <SocialIcons theme='light' />
+                    <LeftContainer >
+                        <SocialIcons className="social__icons" theme='light' />
                     </LeftContainer>
                     <RightContainer>
-                        <Box>
+                        <Box className="box">
                             <Main className="main__left  animate__animated animate__rotateInUpLeft">
                                 <Title>
                                     <Design width={40} height={40} className="title logo" />
@@ -56,7 +56,7 @@ const MySkillsPage = () => {
                                     </ul>
                                 </Description>
                             </Main>
-                            <Main className="animate__animated animate__rotateInUpRight">
+                            <Main className="main__right animate__animated animate__rotateInUpRight">
                                 <Title>
                                     <Develope className="logo" width={40} height={40} />
                                     <span className="title">Backend</span>
@@ -137,6 +137,7 @@ display:flex;
 justify-content:space-evenly;
 align-items:center;
 margin-left:-1em;
+flex-wrap:wrap;
 `
 
 const Main = styled.div`

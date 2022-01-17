@@ -4,6 +4,7 @@ import { NavLink } from "react-router-dom";
 import { Github } from "../components/AllSvgs"
 import { DarkTheme } from "../components/Theme";
 import { motion } from "framer-motion";
+import "../App.css"
 const Card = (props) => {
 
 
@@ -22,7 +23,7 @@ const Card = (props) => {
                 }
             </Tags>
             <Footer>
-                <Link to={{ pathname: `${github}` }} target="_blank" className="link__container">
+                <Link to={{ pathname: `${github}` }} target="_blank" className="link__container projects__button">
                     Visit
                     <Github className="github__logo" width={20} height={20} fill={props.theme === "dark" ? DarkTheme.text : DarkTheme.body} />
                 </Link>
