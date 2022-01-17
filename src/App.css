@@ -109,8 +109,6 @@
   }
 
 
-
-
 }
 
 @media screen and (max-width: 800px) {
@@ -137,10 +135,6 @@
 
   .intro__content>p {
     font-size: 14px !important;
-  }
-
-  .center__bar {
-    flex-direction: column !important;
   }
 
   .center__bar>a {
