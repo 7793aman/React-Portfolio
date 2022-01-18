@@ -34,7 +34,7 @@ const Main = () => {
 
             <BodyPanel >
                 <LeftPanel>
-                    <div className='work__content animate__animated animate__fadeInLeft'>
+                    <div className='animate__animated animate__fadeInLeft'>
                         <Work to="/work" click={click}>
                             <motion.h2
                                 whileTap={{ scale: 0.9 }}
@@ -50,12 +50,12 @@ const Main = () => {
 
                 <CenterPanel className='center__panel ' click={click}>
                     {!click && <Center click={click} className='animate__animated animate__zoomIn yin_yang'>
-                        <YinYang onClick={() => handleClick()} width={click ? 95 : 175} height={click ? 95 : 175} fill='currentColor' style={{ cursor: 'pointer' }} />
+                        <YinYang onClick={() => handleClick()} width={click ? 95 : 180} height={click ? 95 : 180} fill='currentColor' style={{ cursor: 'pointer' }} />
                         {!click && <h2>Who am I?</h2>}
                     </Center>}
 
                     {click ? <Center click={click} className='yinyang__clicked animate__animated animate__zoomIn'>
-                        <YinYang onClick={() => handleClick()} width={click ? 95 : 175} height={click ? 95 : 175} fill='currentColor' style={{ cursor: 'pointer' }} />
+                        <YinYang onClick={() => handleClick()} width={click ? 95 : 180} height={click ? 95 : 180} fill='currentColor' style={{ cursor: 'pointer' }} />
                         {!click && <h2>Who am I?</h2>}
                     </Center> : ''}
 
@@ -161,13 +161,6 @@ const LeftPanel = styled.div`
 display:flex;
 flex-direction:column;
 align-items:baseline;
-
-.work__content{
-    position:relative;
-    top:8em;
-    left:-0.75em;
-    display:flex;
-}
 `
 
 const Work = styled(NavLink)`
@@ -176,6 +169,11 @@ text-decoration:none;
 z-index:3;
 transform: rotate(-90deg);
 transition: transform 0.2s ease-in;
+    position:relative;
+    top:9rem;
+    left:-0.75em;
+    display:flex;
+
 
 &:hover{
     transform:scale(1.1) rotate(-90deg);
@@ -204,7 +202,7 @@ display:flex;
 flex-direction:column;
 align-items:center;
 width:${props => props.click ? '0%' : ''};
-margin-top:5em;
+margin-top:4rem;
 position:${props => props.click ? "absolute" : ""};
 bottom:${props => props.click ? "1vh" : ""};
 right:${props => props.click ? "1em" : ""};
