@@ -298,9 +298,9 @@ transition: transform 0.2s ease-in;
 
 const DarkDiv = styled.div`
 position: absolute;
-right:51%;
+right:52%;
 width:${props => props.click ? '49%' : '0%'};
-height:${props => props.click ? '100%' : '0%'};
+height:${props => props.click ? '100vh' : '0%'};
 background:black;
 transition: height 0.5s ease, width 1s ease 0.5s ;
 `

@@ -35,11 +35,11 @@ const Intro = () => {
 
 const Box = styled(motion.div)`
 position:absolute;
-left:49%;
+left:48%;
 top:53%;
 transform :translate(-50%, -50%);
-width:56%;
-height:18rem;
+width:52%;
+height:45vh !important;
 display:flex;
 z-index:3;
 
@@ -75,14 +75,14 @@ const Text = styled.div`
 display:flex;
 flex-direction:column;
 justify-content:space-around;
-font-size:1.2rem;
+font-size:2vw;
 color:${props => props.theme.body};
 padding:2rem;
 cursor:pointer;
 
 &>*:last-child{
     color:${props => `rgba(${props.theme.bodyRgba},0.6)`};
-    font-size:1.1rem;
+    font-size:1.4vw;
 }
 `
 export default Intro;
