@@ -18,8 +18,8 @@ const Intro = () => {
                     <p>I am currently pursuing Master's at Virginia Tech and have four years of exprience as a full-stack developer.</p>
                 </Text>
             </SubBox>
-            <SubBox>
-                <motion.div className="animate__animated animate__fadeInDown"
+            <SubBox >
+                <motion.div className="animate__animated animate__fadeInDown img__box"
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{ duration: 1, delay: 1 }}
@@ -63,9 +63,16 @@ const SubBox = styled.div`
 position:relative;
 display:flex;
 flex:0.5;
+
+.img__box{
+    width:100%;
+    display:flex;
+    justify-content:center;
+}
 .pic{
-    position:absolute;
-    bottom:0;
+     position:absolute;
+     bottom:0;
+
 }
 `
 

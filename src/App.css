@@ -10,7 +10,7 @@
   }
 
 
-  .projects__main h2 {
+  .projects__main h2, a {
     font-size: 18px !important;
   }
 
@@ -43,18 +43,16 @@
     overflow: scroll !important;
   }
 
-  .center__container {
-    height: 100vh !important;
-  }
 
   .about__right {
+
     margin-left: 4rem;
-    justify-content: none;
+    justify-content: unset !important;
     flex-direction: column;
   }
 
   .about__main {
-    height: 60vh;
+    height: 100vh !important;
     margin-top: 2rem;
     font-size: 14px !important;
     justify-content: space-evenly !important;
@@ -63,7 +61,7 @@
 
   .spaceman>img {
     position: relative;
-    top:0 !important;
+    top: -5vh !important;
     height: auto !important;
     width: 200px;
 
@@ -119,14 +117,20 @@
   }
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 800px) {
+  .main__container h2, h3, h4, h5, h6 {
+
+    font-size: 3vw !important;
+
+  }
+
   .yinyang__clicked .prefix__svg-inline--fa {
     width: 75px !important;
     height: auto;
   }
 
-  h1, h3, h2 {
-    font-size: 18px !important;
+  .yin_yang .prefix__svg-inline--fa {
+    width: 25vw !important;
   }
 
   .intro__box {
@@ -142,8 +146,14 @@
         #000000 50%) right !important;
   }
 
+  .img__box {
+    position: relative;
+    display: flex;
+    justify-content: center;
+  }
+
   img {
-    width: 133px !important;
+    width: 125px !important;
     height: auto;
   }
 

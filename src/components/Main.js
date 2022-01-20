@@ -17,7 +17,7 @@ const Main = () => {
     }
 
     return (
-        <MainContainer>
+        <MainContainer className='main__container'>
             <DarkDiv click={click} className='dark__div animate__animated animate__slideInDown' />
             <HeaderPanel>
                 <LogoComponent theme={click ? 'dark' : 'light'} />
@@ -120,7 +120,7 @@ height:98vh;
 position:relative;
 padding:0.25rem 2rem;
 h2, h2, h4, h5, h6{
-    font-size:2vw;
+    font-size:3.8vh;
     font-family:'Karla', sans-serif;
     font-weight:500;
     letter-spacing:1px;
