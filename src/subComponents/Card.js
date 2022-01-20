@@ -65,7 +65,7 @@ color:${props => props.theme.text};
 
 const Box = styled(motion.li)`
 z-index:9;
-width: 18rem;
+width: 28vw;
 height:43vh;
 background-color: ${props => props.theme.text};
 color:${props => props.theme.body};
