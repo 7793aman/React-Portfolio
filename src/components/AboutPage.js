@@ -50,7 +50,7 @@ const AboutPage = () => {
                                         top: '28em',
                                         left: '9em'
                                     }}
-                                    animate={{ top: '-2em', left: '-2em' }}
+                                    animate={{ top: '-15vh', left: '-2em' }}
                                     transition={{ type: 'spring', duration: 1.5, delay: 0.5 }}
 
                                 ></motion.img>
@@ -97,6 +97,7 @@ height:15vh;
 const CenterContainer = styled.div`
 display:flex;
 z-index:9;
+height:85vh;
 `
 const RightContainer = styled.div`
 flex:1;
@@ -129,7 +130,6 @@ margin-right:3em;
 
 const Box = styled.div`
 background-color:${props => props.theme.body};
-height:85vh;
 `
 
 const float = keyframes`

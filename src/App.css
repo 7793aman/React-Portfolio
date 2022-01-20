@@ -43,6 +43,9 @@
     overflow: scroll !important;
   }
 
+  .center__container {
+    height: 100vh !important;
+  }
 
   .about__right {
     margin-left: 4rem;
@@ -51,16 +54,17 @@
   }
 
   .about__main {
+    height: 60vh;
     margin-top: 2rem;
     font-size: 14px !important;
-    height: 95vh !important;
     justify-content: space-evenly !important;
+    margin-bottom: 4em;
   }
 
   .spaceman>img {
-    position: unset;
-    margin-top: 4rem;
-    height: 300px !important;
+    position: relative;
+    top:0 !important;
+    height: auto !important;
     width: 200px;
 
   }
