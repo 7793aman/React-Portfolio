@@ -139,7 +139,7 @@ justify-content:space-between;
 const Contact = styled(NavLink)`
 color:${props => props.theme.text};
 text-decoration:none;
-font-size:18px;
+font-size:1.8vw;
 z-index:9;
 transition: transform 0.2s ease-in;
 

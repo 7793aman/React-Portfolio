@@ -13,7 +13,7 @@ const LogoComponent = (props) => {
 
 const Logo = styled(NavLink)`
 text-decoration:none;
-font-size:2rem;
+font-size:2.5vw;
 font-weight:700;
 display:inline-block;
 color:${props => props.color === 'dark' ? DarkTheme.text : DarkTheme.body};
