@@ -18,7 +18,7 @@ const Main = () => {
 
     return (
         <MainContainer>
-            <DarkDiv click={click} className='dark__div' />
+            <DarkDiv click={click} className='dark__div animate__animated animate__slideInDown' />
             <HeaderPanel>
                 <LogoComponent theme={click ? 'dark' : 'light'} />
                 <PowerButton />
@@ -299,10 +299,11 @@ transition: transform 0.2s ease-in;
 const DarkDiv = styled.div`
 position: absolute;
 right:52%;
+transition: height 0.5s ease, width 1s ease 0.5s ;
 width:${props => props.click ? '49%' : '0%'};
 height:${props => props.click ? '100vh' : '0%'};
 background:black;
-transition: height 0.5s ease, width 1s ease 0.5s ;
+
 `
 
 export default Main;
