@@ -48,7 +48,7 @@ display:flex;
 cursor:pointer;
 position:fixed;
 left:9rem;
-top:2.5rem;
+top:7vh;
 
 &>*: nth-child(1){
 animation-delay:0.2s;
