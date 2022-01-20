@@ -19,7 +19,7 @@ const Intro = () => {
                 </Text>
             </SubBox>
             <SubBox>
-                <motion.div
+                <motion.div className="animate__animated animate__fadeInDown"
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{ duration: 1, delay: 1 }}
@@ -66,8 +66,6 @@ flex:0.5;
 .pic{
     position:absolute;
     bottom:0;
-    left:50%;
-    transform:translate(-50%,0%);
 }
 `
 
