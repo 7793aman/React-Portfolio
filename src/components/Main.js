@@ -170,7 +170,7 @@ z-index:3;
 transform: rotate(-90deg);
 transition: transform 0.2s ease-in;
     position:relative;
-    top:9rem;
+    top:25vh;
     left:-0.75em;
     display:flex;
 
@@ -202,7 +202,7 @@ display:flex;
 flex-direction:column;
 align-items:center;
 width:${props => props.click ? '0%' : ''};
-margin-top:4rem;
+margin-top:15vh;
 position:${props => props.click ? "absolute" : ""};
 bottom:${props => props.click ? "1vh" : ""};
 right:${props => props.click ? "1em" : ""};
@@ -259,7 +259,7 @@ top:-2em;
 `
 
 const RightPanelContent = styled.div`
-height:93%;
+height:75vh;
 display:flex;
 justify-content:space-around;
 flex-direction:column;
