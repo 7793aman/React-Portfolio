@@ -120,7 +120,7 @@ height:98vh;
 position:relative;
 padding:0.25rem 2rem;
 h2, h2, h4, h5, h6{
-    font-size:22px;
+    font-size:2vw;
     font-family:'Karla', sans-serif;
     font-weight:500;
     letter-spacing:1px;
