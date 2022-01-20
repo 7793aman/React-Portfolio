@@ -203,6 +203,7 @@ flex-direction:column;
 align-items:center;
 width:${props => props.click ? '0%' : ''};
 margin-top:15vh;
+margin-right:2vw;
 position:${props => props.click ? "absolute" : ""};
 bottom:${props => props.click ? "1vh" : ""};
 right:${props => props.click ? "1em" : ""};
