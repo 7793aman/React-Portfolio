@@ -145,8 +145,7 @@ const WorkPage = () => {
                                             <li>
                                                 Optimized the database queries and implemented cache at multiple levels to
                                                 provide high performance for reducing the network latency.                                            <br></br>
-
-                                                /</li>
+                                            </li>
                                             <br></br>
                                             <li>   Developed multiple Frontend dashboard components using React.js. </li>
 
