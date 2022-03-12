@@ -37,7 +37,7 @@ const WorkPage = () => {
                                         </div>
 
                                         <div>
-                                            <Date ><i>Nov 2016 - Jan 2018</i></Date>
+                                            <Date ><i>May 2018 - May 2021</i></Date>
                                             <Location>| Pune, India</Location>
                                         </div>
                                     </Title>
@@ -91,7 +91,7 @@ const WorkPage = () => {
                                         </div>
 
                                         <div>
-                                            <Date ><i>May 2018 - May 2021</i></Date>
+                                            <Date ><i>Nov 2016 - Jan 2018</i></Date>
                                             <Location>| Pune, India</Location>
                                         </div>
                                     </Title>
