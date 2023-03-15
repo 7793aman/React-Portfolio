@@ -28,6 +28,36 @@ const WorkPage = () => {
                             <WorkExperience>
                                 <Develope width={50} height={50} />
                             </WorkExperience>
+                            <Content>
+                                <TimeLineItem className="timeline">
+                                    <Title>
+                                        <div className="first__details">
+                                            <Name >PayPal </Name>
+                                            <Position>| Software Engineer Intern</Position>
+                                        </div>
+
+                                        <div>
+                                            <Date ><i>May 2022 - Aug 2022</i></Date>
+                                            <Location>| San Jose, CA</Location>
+                                        </div>
+                                    </Title>
+
+                                    <Description className="last__child">
+                                        <ul>
+                                            <li>
+                                                Collaborated with the Business Debit Card team to implement new features into Node.js-based middleware and React.js front-end.
+                                            </li>
+                                            <br></br>
+                                            <li>
+                                                Wrote automation cases with Nemo.js for multiple end-to-end flows and Karma test cases to test individual components.                                           <br></br>
+                                            </li>
+                                            <br></br>
+                                            <li>  Analyzed, documented, and fixed existing web application features and bugs in production level environment. </li>
+
+                                        </ul>
+                                    </Description>
+                                </TimeLineItem>
+                            </Content>
                             <Content >
                                 <TimeLineItem>
                                     <Title>
@@ -45,28 +75,23 @@ const WorkPage = () => {
                                     <Description>
                                         <ul>
                                             <li>
-                                                Migrated legacy application to a modern stack cloud platform to gave a more
-                                                unified experience to the user for sales reporting and planning.
+                                                Migrated jQuery front end for legacy application to a SPA implemented using Angular8 framework to give a more unified experience to the user and testability of the application.
                                             </li>
                                             <br></br>
                                             <li>
-                                                Engineered a SPA from scratch to enable self serviceability for multiple clients for
-                                                configuring plan Parameters for Incentive cycles.
+                                                Migrated jQuery front end for legacy application to a SPA implemented using Angular8 framework to give a more unified experience to the user and testability of the application.
                                             </li>
                                             <br></br>
                                             <li>
-                                                Spearheaded a what-if simulation and reporting application for tracking incentive
-                                                management .
+                                                Automated the application setup through PowerShell, improving the setup time from an hour to 10 minutes.
                                             </li>
                                             <br></br>
                                             <li>
-                                                Ideate an new module with a team of 5 in 48 hours as a part of hackathon and
-                                                worked single handedly to productionize the product within 2months
+                                                Upgraded the performance by 15% of report generation module via removing redundant SQL joins and optimizing database queries
                                             </li>
                                             <br></br>
                                             <li>
-                                                Automated the legacy application setup through Powershell, improving the setup
-                                                time from an hour to 5 minutes.
+                                                Standardized Swagger-based API documentation to eliminate 100% manual API documentation and reduce overall testing efforts
                                             </li>
                                             <br></br>
                                             <li>
@@ -75,7 +100,7 @@ const WorkPage = () => {
                                             </li>
                                             <br></br>
                                             <li>
-                                                Technically and functionally mentored five new associates.
+                                                Technically and functionally mentored two new associates.
                                             </li>
                                         </ul>
                                     </Description>
@@ -87,7 +112,7 @@ const WorkPage = () => {
                                     <Title>
                                         <div className="first__details">
                                             <Name >Accenture </Name>
-                                            <Position>| Software Developer</Position>
+                                            <Position>| Associate Software Engineer</Position>
                                         </div>
 
                                         <div>
@@ -99,60 +124,22 @@ const WorkPage = () => {
                                     <Description>
                                         <ul>
                                             <li>
-                                                Developed and Debugged software code for the Java backend of the web
-                                                application along with the Unit tests
+                                                Developed backend of the web application using JAX-RS using Jersey and implemented JUnit test cases.
                                             </li>
                                             <br></br>
-                                            <li> Devised Javascript based SQL Injection checks to made application more robust
-                                                against the security threats
+                                            <li> Implemented JavaScript-based SQL injection checks to make the application more robust against static code security threats detected by Synopsys.
                                             </li>
                                             <br></br>
                                             <li>
-                                                Accelerated the SQL queries by 20% by removing redundant joints and writing
-                                                stored procedures to improve the individual API’s response time.
+                                                Implemented a dashboard using JSP, jQuery, MySql, Excel and Fusion Charts to poll the data every few minutes and display various project statistics as charts, tiles, and tables.
+                                            </li>
 
-                                            </li>
-                                            <br></br>
-                                            <li>
-                                                Standardized Swagger based API documentation to eliminate 100% manual API
-                                                documentation and reducing overall testing efforts.
-                                            </li>
                                         </ul>
                                     </Description>
                                 </TimeLineItem>
                             </Content>
 
-                            <Content>
-                                <TimeLineItem className="timeline">
-                                    <Title>
-                                        <div className="first__details">
-                                            <Name >Curofy </Name>
-                                            <Position>| Software Intern</Position>
-                                        </div>
 
-                                        <div>
-                                            <Date ><i>Dec 2015 - May 2016</i></Date>
-                                            <Location>| Delhi, India</Location>
-                                        </div>
-                                    </Title>
-
-                                    <Description className="last__child">
-                                        <ul>
-                                            <li>
-                                                Wrote scalable REST APIs for Curofy mobile and web apps using Node.js.
-                                            </li>
-                                            <br></br>
-                                            <li>
-                                                Optimized the database queries and implemented cache at multiple levels to
-                                                provide high performance for reducing the network latency.                                            <br></br>
-                                            </li>
-                                            <br></br>
-                                            <li>   Developed multiple Frontend dashboard components using React.js. </li>
-
-                                        </ul>
-                                    </Description>
-                                </TimeLineItem>
-                            </Content>
                         </Main>
 
                     </RightContainer>
@@ -292,23 +279,23 @@ const Title = styled.h2`
 
 const Name = styled.span`
                 margin-right:0.5rem;
-                font-size:1.5rem;
+                font-size:2rem;
                 font-weight:700;
                 `
 
 const Position = styled.span`
-                font-size:1rem;
+                font-size:1.25rem;
                 font-weight:100;
                 `
 
 const Date = styled.span`
                 margin-right:0.5rem;
-                font-size:0.9rem;
+                font-size:1.25rem;
                 color: rgba(0,0,0,0.75);
                 `
 
 const Location = styled.span`
-                font-size:0.9rem;
+                font-size:1.25rem;
                 color: rgba(0,0,0,0.75);
                 `
 

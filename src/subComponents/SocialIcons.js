@@ -1,7 +1,7 @@
 import React from "react"
 import { NavLink } from 'react-router-dom'
 import styled from "styled-components"
-import { Github, Facebook, Linkedin } from "../components/AllSvgs"
+import { Github, LeetCode, Linkedin } from "../components/AllSvgs"
 import { DarkTheme } from "../components/Theme"
 import { motion } from 'framer-motion'
 
@@ -13,7 +13,7 @@ const SocialIcons = (props) => {
                 whileTap={{ scale: 0.9 }}
             >
                 <NavLink style={{ color: 'inherit' }} target="_blank" to={{ pathname: "https://github.com/7793aman" }}>
-                    <Github width={25} height={25} fill={props.theme === "dark" ? DarkTheme.text : DarkTheme.body} />
+                    <Github width={30} height={30} fill={props.theme === "dark" ? DarkTheme.text : DarkTheme.body} />
                 </NavLink>
             </motion.div>
             <motion.div
@@ -21,15 +21,15 @@ const SocialIcons = (props) => {
                 whileTap={{ scale: 0.9 }}
             >
                 <NavLink style={{ color: 'inherit' }} target="_blank" to={{ pathname: "https://www.linkedin.com/in/aman-al-jain " }}>
-                    <Linkedin width={25} height={25} fill={props.theme === "dark" ? DarkTheme.text : DarkTheme.body} />
+                    <Linkedin width={30} height={30} fill={props.theme === "dark" ? DarkTheme.text : DarkTheme.body} />
                 </NavLink>
             </motion.div >
             <motion.div
                 whileHover={{ scale: 1.2 }}
                 whileTap={{ scale: 0.9 }}
             >
-                <NavLink style={{ color: 'inherit' }} target="_blank" to={{ pathname: "https://www.facebook.com/100003915318091" }}>
-                    <Facebook width={25} height={25} fill={props.theme === "dark" ? DarkTheme.text : DarkTheme.body} />
+                <NavLink style={{ color: 'inherit' }} target="_blank" to={{ pathname: "https://leetcode.com/771993aman/" }}>
+                    <LeetCode width={30} height={30} fill={props.theme === "dark" ? DarkTheme.text : DarkTheme.body} />
                 </NavLink>
             </motion.div>
             <Line color={props.theme} className="line__component" />
