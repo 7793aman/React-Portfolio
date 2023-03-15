@@ -301,7 +301,7 @@ const Location = styled.span`
 
 const Description = styled.div`
                 color:${props => props.theme.text};
-                font-size:calc(0.4em + 1vw);
+                font-size:calc(0.5rem + 0.5vw);
                 padding-top:0.5rem;
                 padding-left:-2rem;
                 strong{
