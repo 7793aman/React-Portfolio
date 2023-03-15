@@ -184,7 +184,7 @@ transition: transform 0.5s ease-out;
 }
 
 `
-const Title = styled.h2`
+const Title = styled.h1`
 display:flex;
 justify-content:center;
 align-items:center;
