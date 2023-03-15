@@ -41,16 +41,25 @@ const MySkillsPage = () => {
                                     <strong>Programming</strong>
                                     <ul>
                                         <li>
-                                            Javascript, Typescript, HTML5, CSS3.
+                                            JavaScript, TypeScript, HTML5, CSS3.
                                         </li>
 
                                     </ul>
                                 </Description>
                                 <Description>
-                                    <strong>Tools/Libraries</strong>
+                                    <strong>Frameworks</strong>
                                     <ul>
                                         <li>
-                                            Angular8, ReactJs, Vue,js, Bootstrap, JQuery, FramerMotion and HighCharts.
+                                            Angular8, ReactJs, Vue,js.
+                                        </li>
+
+                                    </ul>
+                                </Description>
+                                <Description>
+                                    <strong>Libraries/Tools</strong>
+                                    <ul>
+                                        <li>
+                                            Material-UI, Tailwind CSS, Bootstrap, Highcharts, FusionCharts, Karma, Figma and WebPack.
                                         </li>
 
                                     </ul>
@@ -68,15 +77,24 @@ const MySkillsPage = () => {
                                     <strong>Programming</strong>
                                     <ul>
                                         <li>
-                                            C#, Java, Node.Js, Python, SQL and C++.
+                                            C#, C++, Java , SQL and Python.
                                         </li>
                                     </ul>
                                 </Description>
                                 <Description>
-                                    <strong>Tools/Libraries</strong>
+                                    <strong>Frameworks</strong>
                                     <ul>
                                         <li>
-                                            Asp.net, Git, SVN, BitBucket, Teamcity and Splunk.
+                                            ASP.NET, JAX-RS.
+                                        </li>
+
+                                    </ul>
+                                </Description>
+                                <Description>
+                                    <strong>Databases/Tools</strong>
+                                    <ul>
+                                        <li>
+                                            MySQL, SQL Server, MongoDB, Firebase, Git, SVN, TeamCity amd Splunk.
                                         </li>
 
                                     </ul>
